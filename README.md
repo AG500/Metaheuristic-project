@@ -15,6 +15,6 @@ Discrete Optimization:
 TSP Problems:
 To use JMetalPy on this data base we have to modify the TSP problem class so it can accept float coordinates. Indeed, TSP file on the internet are usualy with integer coordinate and it looks like the developpers used "int()" to optimize the code.
 
-So firts, we have to change the TSP class by creating another class that i called TSP2.
+So firt, we have to change the TSP class by creating another class that i called TSP2. !!!!Complete with the file name !!!!
 
 Djibouti data base:
