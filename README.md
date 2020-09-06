@@ -17,7 +17,8 @@ To use JMetalPy on this data base we have to modify the TSP problem class so it 
 
 So firt, we have to change the TSP class by creating another class that i called TSP2. The code is in the "TSP2 class file" (Master).
 
-Then what algorithm to use? After some Simulated Algorithm experiments i decided to use Genetic Algorithm. Indeed, Simulated Annealing here is not so different than "trying every combinaison" because in JMetalPy it uses a mutation called "Swap Permutation" that select 2 cities and permutate them !?!?. While in GA, if one of the parents have the optimal combinaison for some of the cities, this combinaison can survive threw the next generation, depending of the size of the offspring (childs) and the probability of crossover and mutation.
+Then what algorithm to use? After some Simulated Algorithm experiments i decided to use Genetic Algorithm. Indeed, Simulated Annealing here is not so different than "trying every combinaison" because in JMetalPy it uses a mutation called "Swap Permutation" that select 2 cities and permutate them. While in GA, if one of the parents have the optimal combinaison for some of the cities, this combinaison can survive threw the next generation, depending of the size of the offspring (childs) and the probability of crossover and mutation.
+In term of performance, surprisingly, the GA seems to perform better than SA (according to the "BasicObserver" object of JMetalPy) with around 2 000 iterations per seconds.
 
 
 
