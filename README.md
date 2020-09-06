@@ -22,5 +22,5 @@ In term of performance, surprisingly, the GA seems to perform better than SA (ac
 
 
 Djibouti data base:
-This file is composed of 38 cities. By brute force we would have to compute 5,23e^44 different possibilities to find the optimal combinaison. I tried SA with tempreature = 500 and alpha = 0.999999. Best result was 6891 in 6 40 000 iterations and 354s.
+This file is composed of 38 cities. By brute force we would have to compute 5,23e^44 different possibilities to find the optimal combinaison. I tried SA with tempreature = 500 and alpha = 0.999999. The best result was 6 891 in 6 40 000 iterations and 354s. I think it was lock because i did it 4 times and the were superior to 7 400.
 
