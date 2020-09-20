@@ -1,0 +1,42 @@
+
+from jmetal.algorithm.singleobjective.genetic_algorithm import GeneticAlgorithm
+from jmetal.operator import BinaryTournamentSelection
+from jmetal.operator.crossover import PMXCrossover
+from jmetal.operator.mutation import PermutationSwapMutation
+from jmetal.problem.singleobjective.tsp import TSP
+from jmetal.util.comparator import MultiComparator
+from jmetal.util.density_estimator import CrowdingDistance
+from jmetal.util.ranking import FastNonDominatedRanking
+from jmetal.util.termination_criterion import StoppingByEvaluations
+from jmetal.util.observer import BasicObserver
+
+if __name__ == '__main__':
+    problem = TSP2(instance="Djiboutidj38.tsp")
+
+    print('Cities: ', problem.number_of_variables)
+    
+    max_evaluations = 5000000
+    
+    
+    algorithm = GeneticAlgorithm(
+        problem=problem,
+        population_size=10000,
+        offspring_population_size=50000,
+        mutation=PermutationSwapMutation(0.975 / problem.number_of_variables), 
+        crossover=PMXCrossover(0.975),                                           
+        selection=BinaryTournamentSelection(),                              
+        termination_criterion=StoppingByEvaluations(max_evaluations=max_evaluations)
+    )
+
+    #algorithm2.observable.register(observer=ProgressBarObserver(max=max_evaluations))
+    Obs = BasicObserver(frequency = 10000)
+    algorithm.observable.register(Obs)
+    algorithm.run()
+    result = algorithm.get_result()
+
+    print('Algorithm: {}'.format(algorithm.get_name()))
+    print('Problem: {}'.format(problem.get_name()))
+    print('Solution: {}'.format(result.variables))
+    print('Fitness: {}'.format(result.objectives[0]))
+    print('Computing time: {}'.format(algorithm.total_computing_time))
+
