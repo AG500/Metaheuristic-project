@@ -25,5 +25,5 @@ Simulated Annealing here is not so different than "trying every combinaison" bec
 
 
 Djibouti data base:
-This file is composed of 38 cities. By brute force we would have to compute 5,23e^44 different possibilities to find the optimal combinaison. I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 891 in 6 40 000 iterations and 354s. The trick here is to select temperature 
+This file is composed of 38 cities. By brute force we would have to compute 5,23e^44 different possibilities to find the optimal combinaison. I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 891 in 6 040 000 iterations and 354s. The temperature depend on the variations of the fitness during the computation here, because it converge quicly i chose 500 so that it can explore between 6 500 and 10 000. Because Djibouti is a relatively small problem, time is not an issue and because JMetalPy allow only the number of iterations as stopping criterion i chose a small alpha and a big number of iterations so the SA algorithm could search a long time close to the global optimum.
 
