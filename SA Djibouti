@@ -1,0 +1,42 @@
+import scipy as sc
+import numpy as np
+import math
+import re
+import random
+import jmetal as jm
+from jmetal.problem.singleobjective.tsp import TSP
+from jmetal.algorithm.singleobjective import SimulatedAnnealing
+from jmetal.operator.mutation import PermutationSwapMutation
+from jmetal.util.termination_criterion import StoppingByEvaluations
+from jmetal.lab.visualization import Plot
+from jmetal.util.evaluator import SequentialEvaluator
+from jmetal.operator import PolynomialMutation
+from jmetal.util.observer import BasicObserver, PrintObjectivesObserver, WriteFrontToFileObserver, ProgressBarObserver
+from jmetal.util.solution import read_solutions, print_function_values_to_file, print_variables_to_file
+from jmetal.lab.visualization import Plot
+
+problem =  TSP2(instance = "Djiboutidj38.tsp")   #i am using TSP2, wich is the TSP class of JMetal but for Float coordinates
+#print(DjTSP.distance_matrix)
+
+
+                        
+max_evaluations = 6500000
+
+
+algorithm = SimulatedAnnealing(problem=problem, mutation=PermutationSwapMutation(1.0 / problem.number_of_variables), 
+            termination_criterion=StoppingByEvaluations(max_evaluations=max_evaluations))
+
+
+basic = BasicObserver(frequency=10000.0) #modifier une classe afin d'avoir la temperature?
+ 
+algorithm.temperature = 500  algorithm.alpha = 0.999999 
+
+algorithm.observable.register(observer=basic)
+algorithm.run()
+result = algorithm.get_result()
+
+print_variables_to_file(result,'fun')
+print(algorithm.temperature)
+print(algorithm.alpha)
+print("Result :", result.variables)
+print("Fitness :", result.objectives[0], " VS best: 6656")
