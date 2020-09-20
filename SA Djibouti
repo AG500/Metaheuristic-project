@@ -16,16 +16,11 @@ from jmetal.util.solution import read_solutions, print_function_values_to_file, 
 from jmetal.lab.visualization import Plot
 
 problem =  TSP2(instance = "Djiboutidj38.tsp")   #i am using TSP2, wich is the TSP class of JMetal but for Float coordinates
-#print(DjTSP.distance_matrix)
-
-
                         
 max_evaluations = 6500000
 
-
 algorithm = SimulatedAnnealing(problem=problem, mutation=PermutationSwapMutation(1.0 / problem.number_of_variables), 
             termination_criterion=StoppingByEvaluations(max_evaluations=max_evaluations))
-
 
 basic = BasicObserver(frequency=10000.0) #modifier une classe afin d'avoir la temperature?
  
