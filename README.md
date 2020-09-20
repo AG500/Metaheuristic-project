@@ -6,11 +6,11 @@ Hello,
 This project has for goal to find optimisation solutions to the different problems of the exam. 
 As it has been asked there is a file for each problem and this readme will describe the criteria used to choose the algorithms and their parameters.
 
-Notes:
-To do this exam, i have chose the "JMetalPy v 1.5.5" package. To spare time i decided to use only this package so i could master it more easily. The only exception being for TSP where i also used Py2Opt package.
-"JMetalpY" is not without weakness, for example: the "Simulated Annealing" algorithm documentation doen't provide a minimum temperature stopping criterion (if it exist i couldn't find it in the documentation), there is no possibility to export iterations data such as fitness in a file easily ("printed" data are available) and the TSP class problem has to be modified to accept float coordinates.
+To do this project, i have chose the "JMetalPy v 1.5.5" package. To spare time i decided to use only this package so i could master it more easily. The only exception being for TSP where i also used Py2Opt package.
+"JMetalpY" is not without weakness, for example: the "Simulated Annealing" algorithm documentation doen't provide a minimum temperature stopping criterion (if it exist i couldn't find it in the documentation), there is no possibility to export iterations data such as fitness in a file easily ("printed" data are available) and the TSP class problem has to be modified to accept float coordinates. But it does the job.
 
-But it does the job.
+The processor used was an Intel core i5 (8th gen) and computations were made using only one core.
+
 
 Discrete Optimization:
 
