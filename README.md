@@ -11,7 +11,7 @@ To do this project, i have chose the "JMetalPy v 1.5.5" package. To spare time i
 
 The processor used was an Intel core i5 (8th gen) and computations were made using only one core.
 
-!!!!!!!Code and files!!!!!!
+!!!!!!!Code and files + Limit of time!!!!!!
 
 Discrete Optimization:
 
@@ -40,9 +40,10 @@ To keep at least the best individual of the last generation we have to chose use
 
 The global optimum has been found (fitness of 6 656)
 Results are : 
-fitness : 6 656;   time : 525 sec ; iterations : 3 900 000   
-Solution: 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30, 35, 33, 32, 37, 36, 34, 31, 29, 28, 20, 13, 9, 0, 1, 3, 2, 4, 5, 6, 7.
-  Convergence curve of GA on Djibouti TSP :
+              fitness : 6 656;   time : 525 sec ; iterations : 3 900 000   
+              Solution: 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30, 35, 33, 32, 37, 36, 34, 31, 29, 28, 20, 13, 9, 0, 1, 3, 2, 4, 5, 6, 7.
+
+               Convergence curve of GA on Djibouti TSP :
   
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20GA%20Djibouti.JPG)
 
@@ -51,3 +52,4 @@ Qatar TSP:
 This file has 194 cities, compared to Djibouti, this is a much more difficult challenge.
 
 SA and GA approach:
+The SA and GA algorithm are just to slow with my computer to find the optimum solution within days.
