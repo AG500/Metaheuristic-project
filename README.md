@@ -22,7 +22,7 @@ So firt, we have to change the TSP class by creating another class that i called
 
 Then what algorithm to use? Because this is a signle objective combinatory problem, i tried both Simulated Algorithm and Genetic Algorithm. SA because it is a simple algorithm and i hoped than it would be much faster than other algorithms, and GA because of the analogy between DNA and the combination of cities.
 
-Simulated Annealing here is not so different than "trying every combinaison" because in JMetalPy it uses a mutation called "Swap Permutation" that select only 2 cities and permutate them. While in GA, if one of the parents have the optimal combinaison for some of the cities, his combination can survive threw the next generations, depending of the size of the offspring (childs) and the probability of crossover and mutation. Also, SA tend to convergence very quickly to a local optimum while GA, with enough time, goes to the global optimum thanks to the mutation
+Simulated Annealing here is not so different than "trying every combinaison" because in JMetalPy it uses a mutation called "Swap Permutation" that select only 2 cities and permutate them. While in GA, if one of the parents have the optimal combination for a part of the path, the combination can survive threw the next generations, depending of the size of the offspring (childs) and the probability of crossover and mutation. Also, SA tend to convergence very quickly to a local optimum while GA, with enough time, goes to the global optimum.
 
 
 Djibouti data base:
@@ -36,7 +36,9 @@ I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 89
 
 
   Genetic Algorithm:
-To keep at least the best individual of the last generation we have to chose use a numerous population, and a probability of mutation and of crossovers inferior to 1. But we have to keep a good number of computation. That is why after several tests i used these parameters : population : 10 000; mutation : 0.975; Crossover: 0.975. The global optimum has been found (fitness of 6 656)
+To keep at least the best individual of the last generation we have to chose use a numerous population, and a probability of mutation and of crossovers inferior to 1. But we have to keep a good number of computation. After several tests i used these parameters : population : 10 000; mutation : 0.975; Crossover: 0.975. So, we can expect to have about 6 individuals with the same characteristics as their parents. The type of tournament here is a Binary Tournament (only the 2 best individuals ares selected) which is enought. The mutation used is "SwapMutation" which permutate 2 cities at each iterations.
+
+The global optimum has been found (fitness of 6 656)
 Results are : 
 fitness : 6 656;   time : 525 sec ; iterations : 3 900 000   
 Solution: 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30, 35, 33, 32, 37, 36, 34, 31, 29, 28, 20, 13, 9, 0, 1, 3, 2, 4, 5, 6, 7.
@@ -45,3 +47,7 @@ Solution: 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30,
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20GA%20Djibouti.JPG)
 
 
+Qatar TSP:
+This file has 194 cities, compared to Djibouti, this is a much more difficult challenge.
+
+SA and GA appraoch:
