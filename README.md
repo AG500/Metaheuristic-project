@@ -30,6 +30,6 @@ This file is composed of 38 cities. By brute force we would have to compute 5,23
   SA:
 I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 891 in 6 040 000 iterations and 354s. The temperature depend on the variations of the fitness during the computation here, because it converge quicly i chose 500 so that it can explore between 6 500 and 10 000. Because Djibouti is a relatively small problem, time is not an issue and because JMetalPy allow only the number of iterations as stopping criterion i chose a small alpha and a big number of iterations so that the SA algorithm could search a long time close to the global optimum.
     Convergence curve:
-  https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20SA.JPG
+  ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20SA.JPG)
 
 GA:
