@@ -36,7 +36,7 @@ I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 89
 
 
   Genetic Algorithm:
-To keep at least the best individual of the last generation we have to chose use a numerous population, and a probability of mutation and of crossovers inferior to 1. But we have to keep a good number of computation. After several tests i used these parameters : population : 10 000; mutation : 0.975; Crossover: 0.975. So, we can expect to have about 6 individuals with the same characteristics as their parents. The type of tournament here is a Binary Tournament (only the 2 best individuals ares selected) which is enought. The mutation used is "SwapMutation" which permutate 2 cities at each iterations.
+To keep at least the best individual of the last generation we have to chose use a numerous population, and a probability of mutation and of crossovers inferior to 1. But we have to keep a good number of computation. After several tests i used these parameters : population : 10 000; mutation : 0.975; Crossover: 0.975. So, we can expect to have about 6 individuals with the same characteristics as their parents. The type of tournament here is a Binary Tournament (only the 2 best individuals are selected) which is enought. The mutation used is "SwapMutation" which permutate 2 cities at each iterations.
 
 The global optimum has been found (fitness of 6 656)
 Results are : 
@@ -50,4 +50,4 @@ Solution: 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30,
 Qatar TSP:
 This file has 194 cities, compared to Djibouti, this is a much more difficult challenge.
 
-SA and GA appraoch:
+SA and GA approach:
