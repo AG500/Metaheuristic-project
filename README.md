@@ -36,9 +36,9 @@ I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 89
 
 
   Genetic Algorithm:
-To keep at least the best individual of the last generation we have to chose use a numerous population, and a probability of mutation and of crossovers inferior to 1. But we have to keep a good number of computation. That is why after several tests i used these parameters : population : 10 000; mutation : 0.975; Crossover: 0.975.
+To keep at least the best individual of the last generation we have to chose use a numerous population, and a probability of mutation and of crossovers inferior to 1. But we have to keep a good number of computation. That is why after several tests i used these parameters : population : 10 000; mutation : 0.975; Crossover: 0.975. The global optimum has been found (fitness of 6 656)
 Results are : 
-fitness : 6 656;   time : 525 sec 
+fitness : 6 656;   time : 525 sec ; iterations : 3 900 000   
 Solution: 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30, 35, 33, 32, 37, 36, 34, 31, 29, 28, 20, 13, 9, 0, 1, 3, 2, 4, 5, 6, 7.
   Convergence curve of GA on Djibouti TSP :
 ![alt text](
