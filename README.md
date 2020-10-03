@@ -38,7 +38,7 @@ I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 89
   Genetic Algorithm:
 To keep at least the best individual of the last generation we have to chose use a numerous population, and a probability of mutation and of crossovers inferior to 1. But we have to keep a good number of computation. After several tests i used these parameters : population : 10 000; mutation : 0.975; Crossover: 0.975. So, we can expect to have about 6 individuals with the same characteristics as their parents. The type of tournament here is a Binary Tournament (only the 2 best individuals are selected) which is enought. The mutation used is "SwapMutation" which permutate 2 cities at each iterations.
 
-The global optimum has been found (fitness of 6 656)
+The global optimum has been found according to Univ of Waterloo website (fitness of 6 656)
 Results are : 
               fitness : 6 656;   time : 525 sec ; iterations : 3 900 000   
               Solution: 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30, 35, 33, 32, 37, 36, 34, 31, 29, 28, 20, 13, 9, 0, 1, 3, 2, 4, 5, 6, 7.
@@ -55,9 +55,9 @@ SA and GA approach:
 The SA and GA algorithm with the parameters seen above are just too slow with my computer to find the optimum solution within days.
 
 The 2opt algorithm:
-The 2opt algorithm provide a more efficent way to find candidates to the best solution. It could be used as a "mutation" for the GA for example. Replacing the "Swap Permutation" of JMetalPy by a "2-opt" mutation should increase the performance of the algorithm. Sadly, i couldn't try this kind of algorithm because of the complexity of the JMetalpy package and time.
+The 2opt algorithm provide a more efficent way to find candidates to the best solution. It could be used as a "mutation" for the GA for example. Replacing the "Swap Permutation" of JMetalPy by a "2-opt" mutation should increase the performance of the algorithm. Sadly, i couldn't try this kind of algorithm because of the complexity of the JMetalpy package and time. Beside, i tried the 2-opt algorithm using "2
 
-Beside, let see what are the performance with the 2-opt algorithm:
+
 
 
 
