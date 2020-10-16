@@ -68,7 +68,7 @@ For every problem i used the JMetalPy package, using the "Sphere"  problem class
 
 Unimodal Functions:
 
-For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO i decided to focus on PSO only for a better tuning of the parameters.
+For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO i decided to focus on PSO wich seems more efficient.
 
 F1 Shifted Sphere function:
 
@@ -77,7 +77,15 @@ F2 Shifted Schwefel's function:
 
 F3 Shifted Rosenbrock's function:
 
+
+
+Multimodal function:
+
+With multimodal function there could be a lot of local optimum. Therefore diersification is important. In PSO the paramters C1, W, are more important than before.
+
 F4 Shifted Rastrigin's function:
+
+
 
 F5 Shifted Griewank's function:
 
