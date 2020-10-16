@@ -65,13 +65,21 @@ Continuous Optimization :
 
 For every problem i used the JMetalPy package, using the "Sphere"  problem class of JM as a base for every functions. 
 
+
 Unimodal Functions:
+
 For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO i decided to focus on PSO only for a better tuning of the parameters.
 
 F1 Shifted Sphere function:
 
 
+F2 Shifted Schwefel's function:
 
+F3 Shifted Rosenbrock's function:
 
+F4 Shifted Rastrigin's function:
 
+F5 Shifted Griewank's function:
+
+F6 Shifted Ackley's function:
 
