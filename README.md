@@ -52,10 +52,13 @@ Qatar TSP:
 This file has 194 cities, compared to Djibouti, this is a much more difficult challenge.
 
 SA and GA approach:
-The SA and GA algorithm with the parameters seen above are just too slow with my computer to find the optimum solution within days.
+The SA and GA algorithm with the parameters seen above are just too slow with my computer to find the optimum solution within days. So i propose to use the 2-opt algorithm.
 
 The 2opt algorithm:
 The 2opt algorithm provide a more efficent way to find candidates to the best solution. It is very sensible to the initial solution and converge quite quickly. So an improvement should be to used it as a "mutation" step for the GA for example. Replacing the "Swap Permutation" of JMetalPy by a "2-opt" mutation could increase the efficiency of the algorithm. Sadly, i couldn't try this kind of algorithm because of the complexity of the JMetalpy package and time. Beside, i tried the 2-opt algorithm using "Py2opt" package.
+
+The "Py2opt" package need some modifications because it calculate the path without going back to the first city. The "calculate path" function of the "Solver" class has to be modified, i called it "Solver2"
+
 
 
 Continuous Optimization :
