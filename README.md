@@ -63,12 +63,12 @@ The "Py2opt" package need some modifications because it calculate the path witho
 
 Continuous Optimization :
 
-For every problem i used the JMetalPy package, using the "Sphere"  problem class of JM as a base for every functions. 
+For every problem i used the JMetalPy package, using the "Sphere"  problem class of JM as a base for every functions. Because we have to use D=50 and D=500, i first try different combinaision of parameters with D=50 and then use the same parameters as a base for D=500 wich is much more time consuming. 
 
 
 Unimodal Functions:
 
-For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO i decided to focus on PSO wich seems more efficient.
+For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO i decided to focus on PSO wich seems more efficient. For D=500, because the computations are more computer intensive and take a long time i try to reduce the size of the particle swarm as much as possible to get as much iteration per minute as possible.
 
 F1 Shifted Sphere function:
 
@@ -81,10 +81,10 @@ F3 Shifted Rosenbrock's function:
 
 Multimodal function:
 
-With multimodal function there could be a lot of local optimum. Therefore diersification is important. In PSO the paramters C1, W, are more important than before.
+With multimodal function there could be a lot of local optimum. Therefore diersification is important. With PSO the paramters C1, W, are more important than before.
 
 F4 Shifted Rastrigin's function:
-
+There is a lot of local optimum here so 
 
 
 F5 Shifted Griewank's function:
