@@ -59,7 +59,7 @@ The 2opt algorithm provide a more efficent way to find candidates to the best so
 
 The "Py2opt" package need some modifications because it calculate the path without going back to the first city. The "calculate path" function of the "Solver" class has to be modified, i called it "Solver2". The class "RouteFinder" also need to be modified to call "Solver2" instead of "Solver", called it "RouteFinder2".
 
-
+!!!!!Results!!!!!
 
 Continuous Optimization :
 
