@@ -75,7 +75,7 @@ F1 Shifted Sphere function:
 
 F2 Shifted Schwefel's function:
 
-F3 Shifted Rosenbrock's function:
+
 
 
 
@@ -83,8 +83,10 @@ Multimodal function:
 
 With multimodal function there could be a lot of local optimum. Therefore diersification is important. With PSO the paramters C1, W, are more important than before.
 
+F3 Shifted Rosenbrock's function:
+
 F4 Shifted Rastrigin's function:
-There is a lot of local optimum here so 
+There is a lot of local and narrow optimums here. So 
 
 
 F5 Shifted Griewank's function:
