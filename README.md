@@ -67,7 +67,7 @@ Results are:
 
 
 Convergence curve of 2opt algorithm on Djibouti TSP :
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Qatar%20TSP%20GA.JPG)
+![alt text]()
 
 
 
