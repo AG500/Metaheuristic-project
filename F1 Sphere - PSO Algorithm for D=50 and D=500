@@ -1,3 +1,6 @@
+
+############### D = 50 ###############
+
 from jmetal.algorithm.multiobjective.omopso import OMOPSO
 from jmetal.operator import UniformMutation
 from jmetal.operator.mutation import NonUniformMutation
@@ -6,7 +9,67 @@ from jmetal.util.termination_criterion import StoppingByEvaluations
 from jmetal.util.observer import BasicObserver
 from jmetal.util.solution import print_function_values_to_file, print_variables_to_file
 
-#'Number_of_variables' need to be change in order to change D!!
+
+#####  'Number_of_variables' need to be change in order to change D ####
+problem = Sphere2(number_of_variables = 50)
+
+mutation_probability = 1.0 / problem.number_of_variables
+max_evaluations = 1000000
+swarm_size = 3
+
+algorithm = OMOPSO(
+    problem=problem,
+    swarm_size=swarm_size,
+    epsilon=0.0075,            
+    uniform_mutation=UniformMutation(probability=mutation_probability, perturbation=0.5),
+    non_uniform_mutation=NonUniformMutation(mutation_probability, perturbation=0.5,
+                                            max_iterations=int(max_evaluations / swarm_size)),
+    leaders=CrowdingDistanceArchive(100),
+    termination_criterion=StoppingByEvaluations(max_evaluations=max_evaluations)
+)
+
+algorithm.c1_min=0.1
+algorithm.c1_max=0.1 
+algorithm.c2_min=1.5  
+algorithm.c2_max=1.5
+algorithm.weight_min=0
+algorithm.weight_max=0
+
+basic = BasicObserver(frequency=1000.0)
+algorithm.observable.register(observer=basic)
+
+algorithm.run()
+front = algorithm.get_result()
+
+
+print_function_values_to_file(front, 'FUN 50.' + algorithm.get_name() + "." + problem.get_name())
+print_variables_to_file(front, 'VAR 50.' + algorithm.get_name() + "." + problem.get_name())
+
+print('Algorithm (continuous problem): ' + algorithm.get_name())
+print('Problem: ' + problem.get_name())
+print('Computing time: ' + str(algorithm.total_computing_time))
+
+
+
+
+
+
+
+
+############### D = 500 ###############
+
+
+
+from jmetal.algorithm.multiobjective.omopso import OMOPSO
+from jmetal.operator import UniformMutation
+from jmetal.operator.mutation import NonUniformMutation
+from jmetal.util.archive import CrowdingDistanceArchive
+from jmetal.util.termination_criterion import StoppingByEvaluations
+from jmetal.util.observer import BasicObserver
+from jmetal.util.solution import print_function_values_to_file, print_variables_to_file
+
+
+#####  'Number_of_variables' need to be change in order to change D ####
 problem = Sphere2(number_of_variables = 500)
 
 mutation_probability = 1.0 / problem.number_of_variables
@@ -16,7 +79,7 @@ swarm_size = 3
 algorithm = OMOPSO(
     problem=problem,
     swarm_size=swarm_size,
-    epsilon=0.0075,             #epsilon = utilisé pour le comparateur de dominance JMetalPy
+    epsilon=0.0075,            
     uniform_mutation=UniformMutation(probability=mutation_probability, perturbation=0.5),
     non_uniform_mutation=NonUniformMutation(mutation_probability, perturbation=0.5,
                                             max_iterations=int(max_evaluations / swarm_size)),
