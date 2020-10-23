@@ -86,7 +86,7 @@ For every problem i used the JMetalPy package, using the "Sphere"  problem class
 
 Unimodal Functions:
 
-For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO i decided to focus on PSO wich seems more efficient. For D=500, because the computations are more computer intensive and take a long time i try to reduce the size of the particle swarm as much as possible to get as much iterations per minute as possible for quicker convergence. The stoping criteria is the number of iterations. I chose the iteration number depending of the time it took for D=50. I accept the solution if the error with the global optimum is under 1e^-4.
+For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO i decided to focus on PSO wich seems more efficient. For D=500, because the computations are more computer intensive and take a long time i try to reduce the size of the particle swarm as much as possible to get as much iterations per minute as possible for quicker convergence. The stoping criteria is the number of iterations. I chose the iteration number depending of the time it took for D=50. I accept the solution if the error with the global optimum is under 10e^-4.
 
 F1 Shifted Sphere function:
 This is a simple function. Here i chose the parameters for a quick convergence. So a very low C1 and a high C2 with a small swarm.
