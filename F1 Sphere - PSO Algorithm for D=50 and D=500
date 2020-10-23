@@ -6,6 +6,7 @@ from jmetal.util.termination_criterion import StoppingByEvaluations
 from jmetal.util.observer import BasicObserver
 from jmetal.util.solution import print_function_values_to_file, print_variables_to_file
 
+#'Number_of_variables' need to be change in order to change D!!
 problem = Sphere2(number_of_variables = 500)
 
 mutation_probability = 1.0 / problem.number_of_variables
