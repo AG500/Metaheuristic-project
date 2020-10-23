@@ -15,7 +15,8 @@ For every problem there is 3 files : the code of the problem's class, the code o
 
 For the solutions, there is one file that contains all the solutions of the problems.
 
-
+How to run : 
+The class code has to be precede the algorithm code. So you need to copy/paste the spécific class code of the problem, and the algorithm code to run it.
 
 
 
@@ -93,8 +94,7 @@ This is a simple function. Here i chose the parameters for a quick convergence. 
 D = 50
 Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 100 000.
 Results : Fitness = -449.999999    Time : 23.9 sec. Time to be at -449.9999 :  5.6 sec
-Solution : 
-
+Solution : see solutions file
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Sphere%20D%20%3D%2050.JPG)
 
