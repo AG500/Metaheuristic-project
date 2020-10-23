@@ -16,7 +16,8 @@ For every problem there is 3 files : the code of the problem's class, the code o
 For the solutions, there is one file that contains all the solutions of the problems.
 
 How to run : 
-The class code has to precede the algorithm code. So you need to copy/paste the spécific class code of the problem, and the algorithm code to run it. The lower and upper bound and the data used for the problem. 
+The class code has to precede the algorithm code. So you need to copy/paste the spécific class code of the problem, and the algorithm code to run it. The lower and upper bound and the data used for the problem.
+To change dimension, the variable "number_of_variables" has to be changed inside the problem call. Ex for D=500: problem = Sphere2(number_of_variables = 500)
 
 
 
