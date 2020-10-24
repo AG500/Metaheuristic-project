@@ -82,7 +82,7 @@ Convergence curve of 2opt algorithm on Djibouti TSP :
 
 Continuous Optimization :
 
-For every problem i used the JMetalPy package, using the "Sphere"  problem class of JM as a base for every functions. Because we have to use D=50 and D=500, i first try different combinaision of parameters with D=50 and then use the same parameters as a base for D=500 wich is much more time consuming. 
+For every problem i used the JMetalPy package, using the "Sphere"  problem class of JM as a base for every functions. Because we have to use D=50 and D=500, i first try different combinaison of parameters with D=50 and take the best performance parameters as a starting point for D=500.
 
 
 Unimodal Functions:
@@ -125,10 +125,10 @@ F3 Shifted Rosenbrock's function:
 
 
 F4 Shifted Rastrigin's function:
-There is a lot of local and narrow optimums here. In order to get a quick convergence with a good diversification i chos after several tries  a big number of particles, w>0.2 and  C1 >0.4. I set C2 at 1, wich is about two times bigger than C1 to get a fast convergence.
+There is a lot of local and narrow optimums here. Diversification is important, so the number of particles has to be high, and C1 > 0.5. Still, C2 need to be superior to assure a fast convergence to the global optimum.
 
 D=50:
-
+After several try, 
 
 
 F5 Shifted Griewank's function:
