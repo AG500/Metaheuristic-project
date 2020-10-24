@@ -115,7 +115,7 @@ Solution : see solutions file
 F2 Shifted Schwefel's function:
 Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Regularly, the algorithm stop working for 10 min to 20 min and then restart. I think it has to do with the memory allocation of Python/JMetalPy and the function "abs()" used for the function.
 
-D=50
+D = 50
 
 
 
@@ -131,12 +131,12 @@ F3 Shifted Rosenbrock's function:
 F4 Shifted Rastrigin's function:
 There is a lot of local and narrow optimums here. Diversification is important, so the number of particles has to be high, and C1 > 0.5. Still, C2 need to be superior to assure a fast convergence to the global optimum.
 
-D=50:
+D = 50:
 After several try, 
 
 
 F5 Shifted Griewank's function:
-D=50
+D = 50
 
 
 
@@ -148,11 +148,12 @@ Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Griewank%20D%20%3D%20500.JPG)
 
 F6 Shifted Ackley's function:
-D=50
+
+D = 50
 
 
 
-D=500
+D = 500
 Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 2 500 000.
 Results : Best fitness = -139.999948    Time : 5243.39 sec. Time to be at -139.9999 :  4 034.94 sec
 
