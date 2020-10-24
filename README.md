@@ -142,10 +142,20 @@ D=50
 
 D=500
 Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 500 000.
-Results : Fitness = -179,99999932   Time : 1174,71 sec. Time to be at -179.9999 :  587.86 sec
+Results : Best fitness = -179.99999932   Time : 1174.71 sec. Time to be at -179.9999 :  587.86 sec
 Solution : see solutions file
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Griewank%20D%20%3D%20500.JPG)
 
 F6 Shifted Ackley's function:
+D=50
+
+
+
+D=500
+Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 2 500 000.
+Results : Best fitness = -139.999948    Time : 5243.39 sec. Time to be at -139.9999 :  4 034.94 sec
+
+![alt text]()
+
 
