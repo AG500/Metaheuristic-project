@@ -87,10 +87,12 @@ For every problem i used the JMetalPy package, using the "Sphere"  problem class
 
 Unimodal Functions:
 
-For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO i decided to focus on PSO wich seems more efficient. For D=500, because the computations are more computer intensive and take a long time i try to reduce the size of the particle swarm as much as possible to get as much iterations per minute as possible for quicker convergence. The stoping criteria is the number of iterations. I chose the iteration number depending of the time it took for D=50. I accept the solution if the error with the global optimum is under 10e^-4.
+For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO i decided to focus on PSO wich seems more efficient. For D=500, because the computations are more computer intensive and take a long time i often try to reduce the size of the particle swarm as much as possible for quicker convergence. The stopping criteria is the number of iterations. I chose the iteration number depending of the time it took for D=50. I accept the solution if the error with the global optimum is under 10e^-4.
+
+Goof to know with PSO : When C2 > C1, intensification is quick while when C2 < C1, intensification of the swarm is slow. A high W allow a good diversification but slow the convergence to an optimum (local or global). A big swarm is more computer itensive per iteration.
 
 F1 Shifted Sphere function:
-This is a simple function. Here i chose the parameters for a quick convergence. So a very low C1 and a high C2 with a small swarm. I applied the same parameters for D=50 and D=500
+This is a simple function with no local optimum. Here i chose the parameters for a quick convergence. So a very low C1 and a high C2 with a very small swarm. I applied the same parameters for D=50 and D=500
 
 D = 50
 Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 100 000.
@@ -120,8 +122,13 @@ With multimodal function there could be a lot of local optimum. Therefore diersi
 
 F3 Shifted Rosenbrock's function:
 
+
+
 F4 Shifted Rastrigin's function:
-There is a lot of local and narrow optimums here. So 
+There is a lot of local and narrow optimums here. In order to get a quick convergence with a good diversification i chos after several tries  a big number of particles, w>0.2 and  C1 >0.4. I set C2 at 1, wich is about two times bigger than C1 to get a fast convergence.
+
+D=50:
+
 
 
 F5 Shifted Griewank's function:
