@@ -137,7 +137,11 @@ After several try,
 
 F5 Shifted Griewank's function:
 
+Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 500 000.
+Results : Fitness = -179,99999932   Time : 1174,71 sec. Time to be at -179.9999 :  587.86 sec
+Solution : see solutions file
 
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Griewank%20D%20%3D%20500.JPG)
 
 F6 Shifted Ackley's function:
 
