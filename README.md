@@ -87,12 +87,14 @@ For every problem i used the JMetalPy package, using the "Sphere"  problem class
 
 Unimodal Functions:
 
-For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO i decided to focus on PSO wich seems more efficient. For D=500, because the computations are more computer intensive and take a long time i often try to reduce the size of the particle swarm as much as possible for quicker convergence. The stopping criteria is the number of iterations. I chose the iteration number depending of the time it took for D=50. I accept the solution if the error with the global optimum is under 10e^-4.
+For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO on the sphere function and the schwefel's function, i decided to focus on PSO wich seems more efficient for continuous functions. In my benchmarks, SA tend to go fast at the beginning of the run but doesn't reach the optimum and GA has about the same behavior but is more efficient. I think the mutation algorithm used in JMetalPy for these two algorithms explain that. It is called "PolynomialMutation" and it lacks precision when the algorithm goes close to the optimum. 
 
-Goof to know with PSO : When C2 > C1, intensification is quick while when C2 < C1, intensification of the swarm is slow. A high W allow a good diversification but slow the convergence to an optimum (local or global). A big swarm is more computer itensive per iteration.
+For D=500, because the computations are more computer intensive and take a long time i often try to reduce the size of the particle swarm as much as possible for quicker convergence. The stopping criteria is the number of iterations. I chose the iteration number depending of the time it took for D=50. I accept the solution if the error with the global optimum is under 10e^-4.
+
+Good to know with PSO : when C2 > C1, intensification is quick while when C2 < C1, intensification of the swarm is slow. A high W allow a good diversification but slow the convergence to an optimum (local or global). A big swarm is more computer itensive per iteration.
 
 F1 Shifted Sphere function:
-This is a simple function with no local optimum. Here i chose the parameters for a quick convergence. So a very low C1 and a high C2 with a very small swarm. I applied the same parameters for D=50 and D=500
+This is a simple function with no local optimum. Here i chose the parameters for a quick convergence. That's why i only have 3 particles for both D=50 and D=500, and w=0.
 
 D = 50
 Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 100 000.
@@ -111,14 +113,16 @@ Solution : see solutions file
 
 
 F2 Shifted Schwefel's function:
+Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Regularly, the algorithm stop working for 10 min to 20 min and then restart. I think it has to do with the memory allocation of Python/JMetalPy and the function "abs()" used for the function.
 
+D=50
 
 
 
 
 Multimodal function:
 
-With multimodal function there could be a lot of local optimum. Therefore diersification is important. With PSO the paramters C1, W, are more important than before.
+With multimodal function there could be a lot of local optimum. Therefore diersification is important.
 
 F3 Shifted Rosenbrock's function:
 
