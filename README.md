@@ -82,7 +82,7 @@ Convergence curve of 2opt algorithm on Djibouti TSP :
 
 Continuous Optimization :
 
-For every problem i used the JMetalPy package, using the "Sphere"  problem class of JM as a base for every functions. Because we have to use D=50 and D=500, i first try different combinaison of parameters with D=50 and take the best performance parameters as a starting point for D=500.
+For every problem i used the JMetalPy package, using the "Sphere"  problem class of JM as a base for every functions. Because we have to use D=50 and D=500, i first try different combination of parameters with D=50 and take the best performance parameters as a starting point for D=500.
 
 
 Unimodal Functions:
