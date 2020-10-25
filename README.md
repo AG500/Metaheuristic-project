@@ -145,16 +145,20 @@ After several try,
 D = 500
 
 
-F5 Shifted Griewank's function:
+F5 Shifted Griewank's function:  
+
+The PSO algorithm is very efficient here and it goes quickly to the fitness -179 quickly. The difficulty is to find the parameters that can goes to -179.9999.
+It doesn't require a lot of particles to find the optimum, less than 3 is enough and fast, with a C2=1.5 and C1 = 0.5. C2 + C3 shouldn't exceed 2 because when the algorithm approach to -179, too important mouvements of the particules make them miss the optimum and the algorithm take a lot of time to goes to -179.9999. W is fix to 0.1 to assure some diversity.
+
 
 D = 50:  
-Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 100 000
+Parameters: Swarm Size = 5, C1 = 0.5, C2 = 1.5, w=0.3  Iterations = 100 000
 Results : Best fitness = -179.99999892   Time : 26.57 sec. Time to be at -179.9999 :  8.92 sec
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Griewank%20D%20%3D%2050.JPG)
 
 
-D = 500: i chose a w at 0.1 for quicker convergence  
+D = 500: here w is only 0.1 and the number of particules is 3, theses parameters are better for D = 500 than D=50.   
 Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 500 000.
 Results : Best fitness = -179.99999932   Time : 1174.71 sec. Time to be at -179.9999 :  587.86 sec
 Solution : see solutions file
