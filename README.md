@@ -94,6 +94,7 @@ For D=500, because the computations are more computer intensive and take a long 
 Good to know with PSO : when C2 > C1, intensification is quick while when C2 < C1, intensification of the swarm is slow. A high W allow a good diversification but slow the convergence to an optimum (local or global). A big swarm is more computer itensive per iteration.
 
 F1 Shifted Sphere function:
+
 This is a simple function with no local optimum. Here i chose the parameters for a quick convergence. That's why i only have 3 particles for both D=50 and D=500, and w=0.
 
 D = 50:
@@ -119,6 +120,8 @@ F2 Shifted Schwefel's function:
 Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Regularly, the algorithm stop working for 10 min to 20 min and then restart. I think it has to do with the memory allocation of Python/JMetalPy and the function "abs()" used for the function.
 
 D = 50:
+
+D = 500:
 
 
 
