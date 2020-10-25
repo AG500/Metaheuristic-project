@@ -120,6 +120,9 @@ F2 Shifted Schwefel's function:
 Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Regularly, the algorithm stop working for 10 min to 20 min and then restart. I think it has to do with the memory allocation of Python/JMetalPy and the function "abs()" used for the function.
 
 D = 50:
+Paramaters : Swarm Size = 3,  C1 = 1.5, C2 = 0.2, w=0.  Iterations = 1 000 000.
+Results : Fitness = -449,99995380281   Time : 175.37 sec. Time to be at -449.9999 :  112.79 sec
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Schwefel%20D%20%3D%2050.JPG)
 
 D = 500:
 
