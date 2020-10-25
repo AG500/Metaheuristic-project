@@ -141,7 +141,7 @@ D = 50:
 Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 1 000 000
 Results : Best fitness =    Time :  sec. Time to be at -329.9999 : 
 
-![alt text]()
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Rastrigin%20D%3D50.JPG)
 
 
 D = 500:  
