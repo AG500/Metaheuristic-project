@@ -148,7 +148,7 @@ D = 500
 F5 Shifted Griewank's function:
 
 D = 50:  
-Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 0 000.
+Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 100 000
 Results : Best fitness = -179.99999892   Time : 26.57 sec. Time to be at -179.9999 :  8.92 sec
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Griewank%20D%20%3D%2050.JPG)
