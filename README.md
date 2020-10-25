@@ -96,7 +96,7 @@ Good to know with PSO : when C2 > C1, intensification is quick while when C2 < C
 F1 Shifted Sphere function:
 This is a simple function with no local optimum. Here i chose the parameters for a quick convergence. That's why i only have 3 particles for both D=50 and D=500, and w=0.
 
-D = 50
+D = 50:
 Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 100 000.
 Results : Fitness = -449.999999    Time : 23.9 sec. Time to be at -449.9999 :  5.6 sec
 Solution : see solutions file
@@ -104,7 +104,7 @@ Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Sphere%20D%20%3D%2050.JPG)
 
 
-D = 500
+D = 500:
 Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 500 000.
 Results : Fitness = -449.9999   Time : 23.9 sec. Time to be at -449.9999 :  5.6 sec
 Solution : see solutions file
@@ -113,9 +113,10 @@ Solution : see solutions file
 
 
 F2 Shifted Schwefel's function:
+
 Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Regularly, the algorithm stop working for 10 min to 20 min and then restart. I think it has to do with the memory allocation of Python/JMetalPy and the function "abs()" used for the function.
 
-D = 50
+D = 50:
 
 
 
