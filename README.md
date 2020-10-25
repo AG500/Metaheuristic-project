@@ -50,8 +50,6 @@ The global optimum has been found (according to Univ of Waterloo website the bes
 Results are : 
    Fitness : 6 656;   time : 525 sec ; iterations : 3 900 000   
    Solution (0 being thefirst city): 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30, 35, 33, 32, 37, 36, 34, 31, 29, 28, 20, 13, 9, 0, 1, 3, 2, 4, 5, 6, 7.
-
-               Convergence curve of GA on Djibouti TSP :
   
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Djibouti%20GA.JPG)
 
