@@ -138,13 +138,17 @@ F4 Shifted Rastrigin's function:
 There is a lot of local and narrow optimums here. Diversification is important, so the number of particles has to be high, and C1 > 0.5. Still, C2 need to be superior to assure a fast convergence to the global optimum.
 
 D = 50:  
-Parameters: Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 100 000
-Results : Best fitness = -179.99999892   Time : 26.57 sec. Time to be at -179.9999 :  8.92 sec
+Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 1 000 000
+Results : Best fitness =    Time :  sec. Time to be at -329.9999 : 
 
 ![alt text]()
 
 
-D = 500
+D = 500:  
+Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 5 000 000
+Results : Best fitness = -326.015924   Time : 14 161.56 sec. Time to be at -329.9999 : not reached
+
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Rastrigin%20D%3D500.JPG)
 
 
 F5 Shifted Griewank's function:  
