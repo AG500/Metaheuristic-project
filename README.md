@@ -149,7 +149,7 @@ F5 Shifted Griewank's function:
 D = 50:
 
 Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 0 000.
-Results : Best fitness = -
+Results : Best fitness = 
 
 ![alt text]()
 
