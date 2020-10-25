@@ -97,8 +97,7 @@ F1 Shifted Sphere function:
 
 This is a simple function with no local optimum. Here i chose the parameters for a quick convergence. That's why i only have 3 particles for both D=50 and D=500, and w=0.
 
-D = 50:
-
+D = 50:  
 Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 100 000.
 Results : Fitness = -449.999999    Time : 23.9 sec. Time to be at -449.9999 :  5.6 sec
 Solution : see solutions file
@@ -106,8 +105,7 @@ Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Sphere%20D%20%3D%2050.JPG)
 
 
-D = 500:
-
+D = 500:  
 Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 500 000.
 Results : Fitness = -449.9999   Time : 23.9 sec. Time to be at -449.9999 :  5.6 sec
 Solution : see solutions file
@@ -120,7 +118,7 @@ F2 Shifted Schwefel's function:
 Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Regularly, the algorithm stop working for 10 min to 20 min and then restart. I think it has to do with the memory allocation of Python/JMetalPy and the function "abs()" used for the function.
 
 D = 50:  
-Paramaters : Swarm Size = 3,  C1 = 1.5, C2 = 0.2, w=0.  Iterations = 1 000 000.
+Parameters : Swarm Size = 3,  C1 = 1.5, C2 = 0.2, w=0.  Iterations = 1 000 000.
 Results : Fitness = -449,99995380281   Time : 175.37 sec. Time to be at -449.9999 :  112.79 sec
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Schwefel%20D%20%3D%2050.JPG)
 
@@ -141,8 +139,7 @@ F4 Shifted Rastrigin's function:
 
 There is a lot of local and narrow optimums here. Diversification is important, so the number of particles has to be high, and C1 > 0.5. Still, C2 need to be superior to assure a fast convergence to the global optimum.
 
-D = 50:
-
+D = 50:  
 After several try, 
 
 
@@ -152,16 +149,14 @@ D = 500
 
 F5 Shifted Griewank's function:
 
-D = 50:
-
+D = 50:  
 Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 0 000.
 Results : Best fitness = 
 
 ![alt text]()
 
 
-D = 500:
-
+D = 500:  
 Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 500 000.
 Results : Best fitness = -179.99999932   Time : 1174.71 sec. Time to be at -179.9999 :  587.86 sec
 Solution : see solutions file
@@ -172,15 +167,13 @@ F6 Shifted Ackley's function:
 
 This function has a "plateau" which mean diversification is important, but because there is one narrow global optimum, values of the parameters should not be too high or the algorithm could miss the optimum, and/or the convergence can be very long. I found the parameters C1 = 1 and C2 = 0.8 to be a good balance, then i set w=0 because it slows the convergence and is not useful.
 
-D = 50:
-
+D = 50:  
 Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 300 000.
 Results : Best fitness = -139.999963    Time : 71.94 sec. Time to be at -139.9999 :  51,03 sec
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Ackley%20D%20%3D%2050.JPG)
 
-D = 500:
-
+D = 500:  
 Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 2 500 000.
 Results : Best fitness = -139.999948    Time : 5243.39 sec. Time to be at -139.9999 :  4 034.94 sec
 
