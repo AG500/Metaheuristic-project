@@ -114,7 +114,7 @@ Solution : see solutions file
   
 F2 Shifted Schwefel's function:
 
-Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Regularly, the algorithm stop working for 10 min to 20 min and then restart. And sometimes, Python crash. I think it has to do with the memory allocation of Python/JMetalPy and the function "abs()" used for the function. The 8Go of RAM of my computer are quickly full with D=500. The consequence is, while with D=500 the optimum is find in less than 2 min, for D=500 the algorithm needs hours (if it doesn't crash). This is another reason why the size of the swarm is minimal (3). 
+Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Regularly, the algorithm stop working for 10 min to 20 min and then restart. And sometimes, Python crash. I think it has to do with the memory allocation of Python/JMetalPy and the function "abs()" used for the function. The 8Go of RAM of my computer are quickly full with D=500. The consequence is, while with D=500 the optimum is find in less than 2 min, for D=500 the algorithm needs hours (if it doesn't crash). This is another reason why i set the size of the swarm at minimum (3). 
 
 
 D = 50:  
