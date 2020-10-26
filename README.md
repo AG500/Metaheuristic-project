@@ -34,7 +34,7 @@ Simulated Annealing here is not so different than "trying every combinaison" bec
 
 
 Djibouti data base:
-This file is composed of 38 cities. By brute force we would have to compute 5,23e^44 different possibilities to find the optimal combinaison. 
+This file is composed of 38 cities. By brute force we would have to compute 5,23e^44 different possibilities to find the optimal combination. 
 
   Simulated Annealing :
 I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 891 with 6 040 000 iterations and 354s. The temperature depend on the variations of the fitness during the computation here, because it converge quickly i chose 500 so that it can explore between the fitness 6 500 and 10 000. Because Djibouti is a relatively small problem, time is not an issue and because JMetalPy allow only the number of iterations as stopping criterion i chose a small alpha and a big number of iterations so that the SA algorithm could search a long time close to the global optimum.
@@ -129,15 +129,18 @@ D = 500:
 
 Multimodal function:
 
-With multimodal function there could be a lot of local optimum. Therefore diersification is important.
-
 F3 Shifted Rosenbrock's function:
-This problem is quite hard, algortihms tend to block at (for D=50) fitness = 480  and fintness = 430. And below 430 the progression is very slow watever pramaters i used. THe dilema is to allow enough diversification to "cross" these two fitnesses but not o much so the convegence to the global optimum doesn't take to much time.
+This problem is quite hard, algortihms tend to block at (for D=50) fitness = 480  and fintness = 430. And below 430 the progression is very slow watever pramaters i used. THe dilema is to allow enough diversification to "cross" these two fitnesses but not so much so the convergence to the global optimum doesn't take to much time. Less particules we have, faster is the algorithm. When C2>1.2 and C1<C2 it goes quickly to the fitness 430 but take time to go to 390. 
+
+D = 50 :  
+Utiliser v3 ou v4?
+
+D = 500 :   
 
 
 F4 Shifted Rastrigin's function:
 
-There is a lot of local and narrow optimums here. Diversification is important, so the number of particles has to be high, and C1 > 0.5. Still, C2 need to be superior to assure a fast convergence to the global optimum. Less particules we have faster is the algorithm. When C2>1.2 and C1<C2 it goes quickly to the fitness 430 but take time to go to 390.
+There is a lot of local and narrow optimums here. Diversification is important, so the number of particles has to be high, and C1 > 0.5. Still, C2 need to be superior to assure a fast convergence to the global optimum. 
 
 D = 50 :  
 Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 1 000 000
