@@ -130,10 +130,20 @@ D = 500:
 Multimodal function:
 
 F3 Shifted Rosenbrock's function:
-This problem is quite hard, algortihms tend to block at (for D=50) fitness = 480  and fintness = 430. And below 430 the progression is very slow watever pramaters i used. THe dilema is to allow enough diversification to "cross" these two fitnesses but not so much so the convergence to the global optimum doesn't take to much time. Less particules we have, faster is the algorithm. When C2>1.2 and C1<C2 it goes quickly to the fitness 430 but take time to go to 390. 
+This problem is quite hard, algortihms tend to block at fitness = 480 and fintness = 430 for D=50. And below 430 the progression is very slow watever pramaters i used. The dilema is to allow enough diversification to "cross" these two fitnesses but not so much so the convergence to the global optimum doesn't take to much time. Less particules we have, faster is the algorithm but it has more chances to be blocked at 480 or 430. When C2>1.2 and C1<C2 often goes quickly to the fitness 430 but take time to go to 390. The performance of PSO on this function depend a lot of the first positions of the particules.
 
 D = 50 :  
-Utiliser v3 ou v4?
+On this run the algorithm start from the fitness 138 916 236 and goes straight to 480 where it struggle to go throught. Sometimes the algorithm block at 430 as well but not this time. 
+Parameters : Swarm Size = 15, C1 = 0.4, C2 = 1.6, w=0.1  Iterations = 6 000 000.
+Results : Best fitness = 390.269571   Time : 2079,07 sec. Time to be at -390.9999 : not reached.
+
+![alt text]()
+
+
+The parameters : Swarm Size = 7, C1 = 0.1, C2 = 1.5, w=0  Iterations = 6 000 000. Work also well with about the same results.
+
+
+
 
 D = 500 :   
 
