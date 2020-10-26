@@ -132,21 +132,21 @@ Multimodal function:
 With multimodal function there could be a lot of local optimum. Therefore diersification is important.
 
 F3 Shifted Rosenbrock's function:
-
+This problem is quite hard, algortihms tend to block at (for D=50) fitness = 480  and fintness = 430. And below 430 the progression is very slow watever pramaters i used. THe dilema is to allow enough diversification to "cross" these two fitnesses but not o much so the convegence to the global optimum doesn't take to much time.
 
 
 F4 Shifted Rastrigin's function:
 
-There is a lot of local and narrow optimums here. Diversification is important, so the number of particles has to be high, and C1 > 0.5. Still, C2 need to be superior to assure a fast convergence to the global optimum.
+There is a lot of local and narrow optimums here. Diversification is important, so the number of particles has to be high, and C1 > 0.5. Still, C2 need to be superior to assure a fast convergence to the global optimum. Less particules we have faster is the algorithm. When C2>1.2 and C1<C2 it goes quickly to the fitness 430 but take time to go to 390.
 
-D = 50:  
+D = 50 :  
 Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 1 000 000
-Results : Best fitness =    Time :  sec. Time to be at -329.9999 : 
+Results : Best fitness = -329.999954   Time : 328.60 sec. Time to be at -329.9999 : 304.05 sec
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Rastrigin%20D%3D50.JPG)
 
 
-D = 500:  
+D = 500 :  
 Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 5 000 000
 Results : Best fitness = -326.015924   Time : 14 161.56 sec. Time to be at -329.9999 : not reached
 
