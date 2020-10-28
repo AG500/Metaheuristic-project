@@ -114,17 +114,20 @@ Solution : see solutions file
   
 F2 Shifted Schwefel's function:
 
-Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Regularly, the algorithm stop working for 10 min to 20 min and then restart. And sometimes, Python crash. I think it has to do with the memory allocation of Python/JMetalPy and the function "abs()" used for the function. The 8Go of RAM of my computer are quickly full with D=500. The consequence is, while with D=500 the optimum is find in less than 2 min, for D=500 the algorithm needs hours (if it doesn't crash). This is another reason why i set the size of the swarm at minimum (3). 
+Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Regularly, the algorithm stop working for 10 min to 20 min and then restart. And sometimes, Python crash. I think it has to do with the memory allocation of Python/JMetalPy and the function "abs()" used for the function. The 8Go of RAM of my computer are quickly full with D=500. The consequence is, while with D=50 the optimum is find in less than 2 min, for D=500 the algorithm needs hours (if it doesn't crash). This is another reason why i set the size of the swarm at minimum (3). 
+
 
 
 D = 50:  
 Parameters : Swarm Size = 3,  C1 = 1.5, C2 = 0.2, w=0.  Iterations = 1 000 000.
-Results : Fitness = -449,99995380281   Time : 175.37 sec. Time to be at -449.9999 :  112.79 sec
+Results : Fitness = -449;99995380281   Time : 175.37 sec. Time to be at -449.9999 :  112.79 sec
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Schwefel%20D%20%3D%2050.JPG)
 
 D = 500:
-
-
+Here we can see the "pauses" aof the algorithms due to, i think, memory management problem of JMetalPy. We can several "flat" interval wich get longer and longer as the algorithm progress.
+Parameters : Swarm Size = 3,  C1 = 1.5, C3 = 0.2, w=0.  Iterations = 2 500 000.
+Results : Fitness = -443.940909969242   Time : 8 508.40 sec. Time to be at -449.9999 :  not reached
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Schwefel%20D%20%3D%20500.JPG)
 
 
 Multimodal function:
