@@ -3,7 +3,7 @@ Github repository for DSTI Metaheuristic project.
 
 Hello,
 
-This project has for goal to find optimisation solutions to the different problems of the exam. 
+This project has for objective to find optimisation solutions to the different problems of the exam. 
 As it has been asked there is a file for each problem and this readme will describe the criteria used to choose the algorithms and their parameters.
 
 To do this project, i have chose the "JMetalPy v 1.5.5" package. To spare time i decided to use only this package so i could master it more easily. The only exception being for TSP where i also used Py2Opt package.
