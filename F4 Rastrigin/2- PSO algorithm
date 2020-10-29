@@ -18,7 +18,7 @@ swarm_size = 20
 algorithm = OMOPSO(
     problem=problem,
     swarm_size=swarm_size,
-    epsilon=0.0075,             #epsilon = utilisé pour le comparateur de dominance JMetalPy
+    epsilon=0.0075,            
     uniform_mutation=UniformMutation(probability=mutation_probability, perturbation=0.5),
     non_uniform_mutation=NonUniformMutation(mutation_probability, perturbation=0.5,
                                             max_iterations=int(max_evaluations / swarm_size)),
@@ -60,7 +60,7 @@ swarm_size = 20
 algorithm = OMOPSO(
     problem=problem,
     swarm_size=swarm_size,
-    epsilon=0.0075,             #epsilon = utilisé pour le comparateur de dominance JMetalPy
+    epsilon=0.0075,             
     uniform_mutation=UniformMutation(probability=mutation_probability, perturbation=0.5),
     non_uniform_mutation=NonUniformMutation(mutation_probability, perturbation=0.5,
                                             max_iterations=int(max_evaluations / swarm_size)),
