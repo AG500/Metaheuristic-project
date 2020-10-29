@@ -1,3 +1,11 @@
+import math
+import re
+import random
+import jmetal as jm
+from jmetal.problem.singleobjective.tsp import TSP
+from jmetal.core.problem import PermutationProblem
+from jmetal.core.solution import PermutationSolution
+
 class Solver2:
     def __init__(self, distance_matrix, initial_route):
         self.distance_matrix = distance_matrix
