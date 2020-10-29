@@ -43,7 +43,7 @@ class Rastrigin(FloatProblem):
             z  = solution.variables[i]-self.listO[i]
             total += z**2 - 10 * math.cos(2 * math.pi* z)+10
             i=i+1
-        solution.objectives[0] = (total -330)    #modified : adding "-330" wich is fbias2
+        solution.objectives[0] = (total -330)    #modified : adding "-330" wich is fbias 4
         return solution
     
     def get_name(self) -> str:
