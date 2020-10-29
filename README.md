@@ -132,7 +132,7 @@ Solution : see solutions file
 
 Multimodal function:
 
-F3 Shifted Rosenbrock's function:
+F3 Shifted Rosenbrock's function:  
 This problem is quite hard, algortihms tend to block at fitness = 480 and fintness = 430 for D=50. And below 430 the progression is very slow watever pramaters i used. The dilema is to allow enough diversification to "cross" these two fitnesses but not so much so the convergence to the global optimum doesn't take to much time. Less particules we have, faster is the algorithm but it has more chances to be blocked at 480 or 430. When C2>1.2 and C1<C2 often goes quickly to the fitness 430 but take time to go to 390. The performance of PSO on this function depend a lot of the first positions of the particules.
 
 D = 50 :  
