@@ -1,0 +1,216 @@
+import Py2Opt
+import random2
+import time
+import jmetal
+import re
+import math
+import numpy as np
+from jmetal.problem.singleobjective.tsp import TSP
+from jmetal.core.problem import PermutationProblem
+from jmetal.core.solution import PermutationSolution
+from Py2Opt.solver import Solver        
+        
+
+class TSP2(PermutationProblem):
+
+    def __init__(self, instance: str = None):
+        super(TSP2, self).__init__()
+
+        distance_matrix, number_of_cities = self.__read_from_file(instance)
+
+        self.distance_matrix = distance_matrix
+
+        self.obj_directions = [self.MINIMIZE]
+        self.number_of_variables = number_of_cities
+        self.number_of_objectives = 1
+        self.number_of_constraints = 0
+
+    def __read_from_file(self, filename: str):
+
+        if filename is None:
+            raise FileNotFoundError('Filename can not be None')
+
+        with open(filename) as file:
+            lines = file.readlines()
+            data = [line.lstrip() for line in lines if line != ""]
+            dimension = re.compile(r'[^\d]+')
+
+            for item in data:
+                if item.startswith('DIMENSION'):
+                    dimension = int(dimension.sub('', item))
+                    break
+
+            c = [-1.0] * (2 * dimension)
+
+            for item in data:
+                if item[0].isdigit():
+                    j, city_a, city_b = [float(x.strip()) for x in item.split(' ')]  #int() modify in float()
+                    c[2 * (int(j) - 1)] = city_a                    #conversion of J in int for position
+                    c[2 * (int(j) - 1) + 1] = city_b                #conversion of J in int for position
+
+            matrix = [[-1] * dimension for _ in range(dimension)]
+
+            for k in range(dimension):
+                matrix[k][k] = 0
+
+                for j in range(k + 1, dimension):
+                    dist = math.sqrt((c[k * 2] - c[j * 2]) ** 2 + (c[k * 2 + 1] - c[j * 2 + 1]) ** 2)
+                    dist = round(dist)
+                    matrix[k][j] = dist
+                    matrix[j][k] = dist
+
+            return matrix, dimension
+
+    def evaluate(self, solution: PermutationSolution) -> PermutationSolution:
+        fitness = 0
+
+        for i in range(self.number_of_variables - 1):
+            x = solution.variables[i]
+            y = solution.variables[i + 1]
+
+            fitness += self.distance_matrix[x][y]
+
+        first_city, last_city = solution.variables[0], solution.variables[-1]
+        fitness += self.distance_matrix[first_city][last_city]
+
+        solution.objectives[0] = fitness
+
+        return solution
+
+    def create_solution(self) -> PermutationSolution:
+        new_solution = PermutationSolution(number_of_variables=self.number_of_variables,
+                                           number_of_objectives=self.number_of_objectives)
+        new_solution.variables = random.sample(range(self.number_of_variables), k=self.number_of_variables)
+
+        return new_solution
+
+
+    @property
+    def number_of_cities(self):
+        return self.number_of_variables
+
+    def get_name(self):
+        return 'Symmetric TSP'
+    
+    
+    
+class Solver2:
+    def __init__(self, distance_matrix, initial_route):
+        self.distance_matrix = distance_matrix
+        self.num_cities = len(self.distance_matrix)
+        self.initial_route = initial_route
+        self.best_route = []
+        self.best_distance = 0
+        self.distances = []
+
+    def update(self, new_route, new_distance):
+        self.best_distance = new_distance
+        self.best_route = new_route
+        return self.best_distance, self.best_route
+
+    def exhaustive_search(self):
+        self.best_route = [0] + list(range(1, self.num_cities))
+        self.best_distance = self.calculate_path_dist(self.distance_matrix, self.best_route)
+
+        for new_route in itertools.permutations(list(range(1, self.num_cities))):
+            new_distance = self.calculate_path_dist(self.distance_matrix, [0] + list(new_route[:]))
+
+            if new_distance < self.best_distance:
+                self.update([0] + list(new_route[:]), new_distance)
+                self.distances.append(self.best_distance)
+
+        return self.best_route, self.best_distance, self.distances
+
+    def two_opt(self, improvement_threshold=0): #modified
+        self.best_route = self.initial_route
+        self.best_distance = self.calculate_path_dist(self.distance_matrix, self.best_route)
+        improvement_factor = 1
+        
+        while improvement_factor > improvement_threshold:
+            previous_best = self.best_distance
+            for swap_first in range(1, self.num_cities - 2):
+                for swap_last in range(swap_first + 1, self.num_cities - 1):
+                    new_route = self.swap(self.best_route, swap_first, swap_last)
+                    new_distance = self.calculate_path_dist(self.distance_matrix, new_route)
+                    self.distances.append(self.best_distance)
+                    if 0 < self.best_distance - new_distance:
+                        self.update(new_route, new_distance)
+
+            improvement_factor = 1 - self.best_distance/previous_best
+        return self.best_route, self.best_distance, self.distances
+
+    @staticmethod
+    def calculate_path_dist(distance_matrix, path):
+        """
+        This method calculates the total distance between the first city in the given path to the last city in the path.
+        """
+        path_distance = 0
+        for ind in range(len(path) - 1):
+            path_distance += distance_matrix[path[ind]][path[ind + 1]] #Has to be modified to make a loop
+        path_distance += distance_matrix[path[0]][path[-1]] #added by AG
+        
+        return float("{0:.2f}".format(path_distance))
+
+    @staticmethod
+    def swap(path, swap_first, swap_last):
+        path_updated = np.concatenate((path[0:swap_first],
+                                       path[swap_last:-len(path) + swap_first - 1:-1],
+                                       path[swap_last + 1:len(path)]))
+        return path_updated.tolist()
+
+
+
+class RouteFinder2:
+    def __init__(self, distance_matrix, cities_names, iterations=5, writer_flag=False, method='py2opt'):
+        self.distance_matrix = distance_matrix
+        self.iterations = iterations
+        self.writer_flag = writer_flag
+        self.cities_names = cities_names
+
+    def solve(self):
+        start_time = time.time()
+        elapsed_time = 0
+        iteration = 0
+        best_distance = 0
+        best_route = []
+        best_distances = []
+
+        while iteration < self.iterations:
+            num_cities = len(self.distance_matrix)
+            print(round(elapsed_time), 'sec \n', 'best distance : ', best_distance, '\n iteration : ', iteration)
+            initial_route = [0] + random2.sample(range(1, num_cities), num_cities - 1)
+            tsp = Solver2(self.distance_matrix, initial_route) #modified for Solver 2
+            new_route, new_distance, distances = tsp.two_opt()
+
+            if iteration == 0:
+                best_distance = new_distance
+                best_route = new_route
+            else:
+                pass
+
+            if new_distance < best_distance:
+                best_distance = new_distance
+                best_route = new_route
+                best_distances = distances
+
+            elapsed_time = time.time() - start_time
+            iteration += 1
+
+        if self.writer_flag:
+            self.writer(best_route, best_distance, self.cities_names)
+
+        if self.cities_names:
+            best_route = [self.cities_names[i] for i in best_route]
+            return best_distance, best_route
+        else:
+            return best_distance, list(best_route)
+
+    @staticmethod
+    def writer(best_route, best_distance, cities_names):
+        f = open("../results.txt", "w+")
+        for i in best_route:
+            f.write(cities_names[i])
+            f.write("\n")
+            print(cities_names[i])
+        f.write(str(best_distance))
+        f.close()
