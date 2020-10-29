@@ -39,9 +39,9 @@ class Schwefel(FloatProblem):
         while i < n :       #modified : prec "for x in FloatSolution:"
             z  = solution.variables[i]-self.listO[i]
             if abs(z) > total:
-                total = abs(z)        #modified : prec "total += x * x" fbias =-450
+                total = abs(z)        
             i=i+1
-        solution.objectives[0] = (total - 450)    #modified : adding "-450" wich is fbias2
+        solution.objectives[0] = (total - 450)    #modified : adding "-450" wich is fbias1
         return solution
     
     def get_name(self) -> str:
