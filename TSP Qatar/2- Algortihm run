@@ -1,7 +1,7 @@
-problem =  TSP2(instance = "qa194.tsp")
+problem =  TSP2(instance = "qa194.tsp")     ### place the file path here
 pb_dist_matrix = problem.distance_matrix
 
-cities_names = list(range(0,195))
+cities_names = list(range(0,195))        
 
 route_finder2 = RouteFinder2(distance_matrix = pb_dist_matrix, cities_names = cities_names, iterations = 500)
 route_finder2.solve()
