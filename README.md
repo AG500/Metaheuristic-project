@@ -15,7 +15,7 @@ For every problem there is 3 files : the code of the problem's class, the code o
 
 For the solutions, there is one file that contains all the solutions of the problems.
 
-_How to run :_  
+__How to run :__  
 
 The class code has to precede the algorithm code. So you need to copy/paste the spécific class code of the problem, and the algorithm code to run it. The lower and upper bound and the data used for the problem.
 To change dimension (continuous problem only), the variable "number_of_variables" has to be changed inside the problem call. Ex for D=500: problem = Sphere2(number_of_variables = 500)
@@ -23,7 +23,8 @@ To change dimension (continuous problem only), the variable "number_of_variables
 
 ## Discrete Optimization:
 
-_TSP Problems:_
+__TSP Problems:__  
+
 To use JMetalPy on this data base we have to modify the TSP problem class so it can accept float coordinates. Indeed, TSP file on the internet are usualy with integer coordinate and it looks like the developpers used "int()" to optimize the code.
 
 So firt, we have to change the TSP class by creating another class that i called TSP2. The code is in the "TSP2 class file" (Master).
@@ -33,17 +34,20 @@ Then what algorithm to use? Because this is a single objective combinatory probl
 Simulated Annealing here is not so different than "trying every combinaison" because in JMetalPy it uses a mutation called "Swap Permutation" that select only 2 cities and permutate them. While in GA, if one of the parents have the optimal combination for a part of the path, the combination can survive threw the next generations, depending of the size of the offspring (childs) and the probability of crossover and mutation. Also, SA tend to convergence very quickly to a local optimum while GA, with enough time, goes to the global optimum.
 
 
-_Djibouti data base:_
+__Djibouti data base:__  
+
 This file is composed of 38 cities. By brute force we would have to compute 5,23e^44 different possibilities to find the optimal combination. 
 
-  Simulated Annealing :
+  __Simulated Annealing :__  
+
 I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 891 with 6 040 000 iterations and 354s. The temperature depend on the variations of the fitness during the computation here, because it converge quickly i chose 500 so that it can explore between the fitness 6 500 and 10 000. Because Djibouti is a relatively small problem, time is not an issue and because JMetalPy allow only the number of iterations as stopping criterion i chose a small alpha and a big number of iterations so that the SA algorithm could search a long time close to the global optimum.
     Convergence curve of SA on Djibouti TSP:
   ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Djibouti%20SA.JPG)
 
 
 
-  Genetic Algorithm:
+  __Genetic Algorithm:__  
+  
 To keep at least the best individual of the last generation we have to use a numerous population, and a probability of mutation and of crossovers inferior to 1. But we have to keep a good number of computation. After several tests i used these parameters : population : 10 000; mutation : 0.975; Crossover: 0.975. So, we can expect to have about 6 individuals with the same characteristics as their parents at each generation. The type of tournament here is a Binary Tournament (only the 2 best individuals are selected), which is enought. The mutation used is "SwapMutation" which permutate 2 cities at each iterations.
 
 The global optimum has been found (according to Univ of Waterloo website the best fitness is 6 656).
@@ -54,7 +58,8 @@ Results are :
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Djibouti%20GA.JPG)
 
 
-_Qatar TSP:_
+__Qatar TSP:__  
+
 This file has 194 cities, compared to Djibouti, this is a much more difficult challenge.
 
 SA and GA approach:
@@ -81,7 +86,7 @@ Results are:
 For every problem i used the JMetalPy package, using the "Sphere"  problem class of JM as a base for every functions. Because we have to use D=50 and D=500, i first try different combination of parameters with D=50 and take the best performance parameters as a starting point for D=500.
 
 
-_Unimodal Functions:_
+__Unimodal Functions:__
 
 For unimodal function, diversity seems less important than intensification, here there is no risk for the algorithm to fall into a local optimum. So, the algorithm should focus in intensification. After several try with GA, SA, GDE, EA and PSO on the sphere function and the schwefel's function, i decided to focus on PSO wich seems more efficient for continuous functions. In my benchmarks, SA tend to go fast at the beginning of the run but doesn't reach the optimum and GA has about the same behavior but is more efficient. I think the mutation algorithm used in JMetalPy for these two algorithms explain that. It is called "PolynomialMutation" and it lacks precision when the algorithm goes close to the optimum. 
 
@@ -89,7 +94,7 @@ For D=500, because the computations are more computer intensive and take a long 
 
 Good to know with PSO : when C2 > C1, intensification is quick while when C2 < C1, intensification of the swarm is slow. A high W allow a good diversification but slow the convergence to an optimum (local or global). A big swarm is more computer itensive per iteration.
 
-_F1 Shifted Sphere function:_
+__F1 Shifted Sphere function:__
 
 This is a simple function with no local optimum. Here i chose the parameters for a quick convergence. That's why i only have 3 particles for both D=50 and D=500, and w=0.
 Here the performance of PSO are so good than fine tuning of the parameters is not necessary. 
@@ -111,7 +116,7 @@ Solution : see solutions file
 
   
   
-_F2 Shifted Schwefel's function:_
+__F2 Shifted Schwefel's function:__
 
 Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Regularly, the algorithm stop working for 10 min to 20 min and then restart. And sometimes, Python crash. I think it has to do with the memory allocation of Python/JMetalPy and the function "abs()" used for the function. The 8Go of RAM of my computer are quickly full with D=500. The consequence is, while with D=50 the optimum is find in less than 2 min, for D=500 the algorithm needs hours (if it doesn't crash). This is another reason why i set the size of the swarm at minimum (3). Without this phenomenon i am confident than the algorithm could reach the global optimum.
 
@@ -131,9 +136,9 @@ Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Schwefel%20D%20%3D%20500.JPG)
 
 
-_Multimodal function:_
+__Multimodal function:__
 
-_F3 Shifted Rosenbrock's function:_  
+__F3 Shifted Rosenbrock's function:__  
 This problem is quite hard, algortihms tend to block at fitness = 480 and fintness = 430 for D=50. And below 430 the progression is very slow watever pramaters i used. The dilema is to allow enough diversification to "cross" these two fitnesses but not so much so the convergence to the global optimum doesn't take to much time. Less particules we have, faster is the algorithm but it has more chances to be blocked at 480 or 430. When C2>1.2 and C1<C2 often goes quickly to the fitness 430 but take time to go to 390. The performance of PSO on this function depend a lot of the first positions of the particules.
 
 D = 50 :  
@@ -151,7 +156,7 @@ The parameters : Swarm Size = 7, C1 = 0.1, C2 = 1.5, w=0  Iterations = 6 000 000
 D = 500 :   
 
 
-_F4 Shifted Rastrigin's function:_
+__F4 Shifted Rastrigin's function:__
 
 There is a lot of local and narrow optimums here. Diversification is important, so the number of particles has to be high, and C1 > 0.5. Still, C2 need to be superior to assure a fast convergence to the global optimum. 
 
@@ -169,7 +174,7 @@ Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Rastrigin%20D%3D500.JPG)
 
 
-_F5 Shifted Griewank's function:_ 
+__F5 Shifted Griewank's function:__ 
 
 The PSO algorithm is very efficient here and it goes quickly to the fitness -179 quickly. The difficulty is to find the parameters that can goes to -179.9999.
 It doesn't require a lot of particles to find the optimum, less than 3 is enough and fast, with a C2=1.5 and C1 = 0.5. C2 + C3 shouldn't exceed 2 because when the algorithm approach to -179, too important mouvements of the particules make them miss the optimum and the algorithm take a lot of time to goes to -179.9999. W is set to 0.1 to assure some diversity.
@@ -189,7 +194,7 @@ Solution : see solutions file
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Griewank%20D%20%3D%20500.JPG)
 
-_F6 Shifted Ackley's function:_
+__F6 Shifted Ackley's function:__
 
 This function has a "plateau" which mean diversification is important, but because there is one narrow global optimum, values of the parameters should not be too high or the algorithm could miss the optimum, and/or the convergence can be very long. I found the parameters C1 = 1 and C2 = 0.8 to be a good balance, then i set w=0 because it slows the convergence and is not useful.
 
