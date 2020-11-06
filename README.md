@@ -20,7 +20,7 @@ The class code has to precede the algorithm code. So you need to copy/paste the 
 To change dimension (continuous problem only), the variable "number_of_variables" has to be changed inside the problem call. Ex for D=500: problem = Sphere2(number_of_variables = 500)
 
 
-##Discrete Optimization:
+## Discrete Optimization:
 
 TSP Problems:
 To use JMetalPy on this data base we have to modify the TSP problem class so it can accept float coordinates. Indeed, TSP file on the internet are usualy with integer coordinate and it looks like the developpers used "int()" to optimize the code.
@@ -75,7 +75,7 @@ Results are:
 
 
 
-##Continuous Optimization :
+## Continuous Optimization :
 
 For every problem i used the JMetalPy package, using the "Sphere"  problem class of JM as a base for every functions. Because we have to use D=50 and D=500, i first try different combination of parameters with D=50 and take the best performance parameters as a starting point for D=500.
 
