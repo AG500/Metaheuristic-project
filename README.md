@@ -57,7 +57,7 @@ To keep at least the best individual of the last generation we have to use a num
 The global optimum has been found (according to Univ of Waterloo website the best fitness is 6 656).
 Results are : 
    Fitness : 6 656;   time : 525 sec ; iterations : 3 900 000 
-   
+   Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Djibouti%20GA.JPG)
 
 
@@ -77,7 +77,7 @@ This method converge quickly to a fitness around 10 000 but has trouble going un
 According to Univ of Waterloo website the best fitness is 9 362.
 Results are:
   Fitness: 9 970;  time : 2633 sec; iterations: 500
-
+  Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Qatar%20TSP%202opt%20algo.JPG)
 
 
@@ -153,13 +153,13 @@ Solution : see solutions file
 The parameters : Swarm Size = 7, C1 = 0.1, C2 = 1.5, w=0  Iterations = 6 000 000. Work also well with about the same results. But is trapped in an local optimum more easily.
 
 
-
-
 D = 500 :  
-I didn't find de the global optimum there, most of the time, with  0.1 <c1 <0.6 and 1.0<C2< 1.5 it goes well to the fitness around 1 200 and then has a very slow progression. When C1>C2 it often took too much time to convergence.
+I didn't find de the global optimum there, most of the time, with  0.1 <c1 <0.6 and 1.0<C2< 1.5 it goes well to the fitness around 1 200 and then has a very slow progression. When C1>C2 it took too much time to convergence.
 
+Parameters : Swarm Size = 5, C1 = 0.4, C2 = 1.6, w=0.00 Iterations = 3 800 000.
+Results : Best fitness = 1 127.8705    Time : 13 460,97 sec. Time to be at -390.9999 : not reached.  
 
-
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rosenbrock%20D%20%3D%20500.JPG)
 
 
 
