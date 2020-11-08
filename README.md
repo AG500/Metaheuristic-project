@@ -7,27 +7,28 @@ This project has for objective to find optimization solutions to the different p
 As it has been asked there is a file for each problem (8) and this readme will describe the criteria used to choose the algorithms and their parameters.
 
 To do this project, i have chose the "JMetalPy v 1.5.5" package. To spare time i decided to use only this package so i could master it more easily. The only exception being for TSP where i also used Py2Opt package.
-"JMetalPy" is not without weakness, for example: the "Simulated Annealing" algorithm documentation doen't provide a minimum temperature stopping criterion (if it exist i couldn't find it in the documentation), there is no possibility to export iterations data such as fitness in a file easily ("printed" data are available) and the TSP class problem has to be modified to accept float coordinates. But it does the job.
+"JMetalPy" is not without weakness, for example: the "Simulated Annealing" algorithm documentation doesn't provide a minimum temperature stopping criterion (if it exist i couldn't find it in the documentation), there is no possibility to export iterations data such as fitness in a file easily ("printed" data are available) and the TSP class problem has to be modified to accept float coordinates. But it does the job.
 
-The processor used was an Intel core i5 (8th gen) and computations were made without multiprocessing. For every problem i decided not to exceed 4 hours of computation. For practical reasons and also because JMetalPy stopping criteria is only about a maximum number of iterations. I defined the maximum number of iterations of the most difficult problems with this rule. For most problem it is not an issue but for Schwefel and Rosenbrock's function with D=500, the algorithm could need way more than 4 hours of computation. 
+The hardware used was an Intel core i5 (8th gen) with 8Go of RAM and Windows 10. Computations were made without multiprocessing. For every problem i decided not to exceed 4 hours of computation because of practical reasons and also because JMetalPy stopping criteria is only about a maximum number of iterations. I defined the maximum number of iterations of the most difficult problems with this rule. For most problem it is not an issue but for Schwefel's and Rosenbrock's function with D=500, the algorithm could need way more than 4 hours of computation. 
 
-For every problem there is 3 files : the code of the problem's class, the code of the algorithm, and the convergence curve. To simplify, the algorithm code contain both D=50 and D=500 problems. 
+For every problem there is 3 files : the code of the problem's class, the code of the algorithm, and the convergence curve. To simplify, the algorithm code contain both D=50 and D=500 problems.
 
 For the solutions, there is one file that contains all the solutions of the problems.
 
 __How to run :__  
 
 The class code has to precede the algorithm code. So you need to copy/paste the spécific class code of the problem, and the algorithm code to run it. It include the lower and upper bound and the data used for the problem.  
-To change dimension (continuous problem only), the variable "number_of_variables" has to be changed inside the problem call. (Example for D=500: problem = Sphere2(number_of_variables = 500))
+To change dimension (continuous problem only), the variable "number_of_variables" has to be changed inside the problem call.  
+Example for D=500: problem = Sphere2(number_of_variables = 500)
 
 
 ## Discrete Optimization:
 
 __TSP Problems:__  
 
-To use JMetalPy on this data base we have to modify the TSP problem class so it can accept float coordinates. Indeed, TSP file on the internet are usualy with integer coordinate and it looks like the developpers used "int()" to optimize the code.
+To use JMetalPy on this data base we have to modify the TSP problem class of this package so it can accept float coordinates. Indeed, TSP file on the internet are usualy with integer coordinate and it looks like the developpers used "int()" to optimize the code.
 
-So firt, we have to change the TSP class by creating another class that i called TSP2. The code is in the "TSP2 class file" (Master).
+So firt, we have to change the TSP class by creating another class that i called TSP2. The code is in the "TSP2 class file".
 
 Then what algorithm to use? Because this is a single objective combinatory problem, i tried both Simulated Algorithm and Genetic Algorithm. SA because it is a simple algorithm and i hoped than it would be much faster than other algorithms, and GA because of the analogy between DNA and the combination of cities.
 
@@ -53,7 +54,7 @@ To keep at least the best individual of the last generation we have to use a num
 The global optimum has been found (according to Univ of Waterloo website the best fitness is 6 656).
 Results are : 
    Fitness : 6 656;   time : 525 sec ; iterations : 3 900 000   
-   Solution (0 being thefirst city): 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30, 35, 33, 32, 37, 36, 34, 31, 29, 28, 20, 13, 9, 0, 1, 3, 2, 4, 5, 6, 7.
+   Solution (0 being the first city): 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30, 35, 33, 32, 37, 36, 34, 31, 29, 28, 20, 13, 9, 0, 1, 3, 2, 4, 5, 6, 7.
   
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Djibouti%20GA.JPG)
 
@@ -139,7 +140,7 @@ Solution : see solutions file
 __Multimodal function:__
 
 __F3 Shifted Rosenbrock's function:__  
-This problem is quite hard, algortihms tend to block at fitness = 480 and fintness = 430 for D=50. And below 430 the progression is very slow watever pramaters i used. The dilema is to allow enough diversification to "cross" these two fitnesses but not so much so the convergence to the global optimum doesn't take to much time. Less particules we have, faster is the algorithm but it has more chances to be blocked at 480 or 430. When C2>1.2 and C1<C2 often goes quickly to the fitness 430 but take time to go to 390. The performance of PSO on this function depend a lot of the first positions of the particules.
+This problem is quite hard, algortihms tend to block at fitness = 480 and fitness = 430 for D=50. And below 430 the progression is very slow watever parameters i used. The dilema is to allow enough diversification to "cross" these two fitnesses but not so much so the convergence to the global optimum doesn't take to much time. Less particules we have, faster is the algorithm but it has more chances to be blocked at 480 or 430. When C2>1.2 and C1<C2 it often goes quickly to the fitness 430 but take time to go to 390. The performance of PSO on this function depend a lot of the first positions of the particules.
 
 D = 50 :  
 On this run the algorithm start from the fitness 138 916 236 and goes straight to 480 where it struggle to go throught. Sometimes the algorithm block at 430 as well but not this time. 
@@ -153,7 +154,13 @@ The parameters : Swarm Size = 7, C1 = 0.1, C2 = 1.5, w=0  Iterations = 6 000 000
 
 
 
-D = 500 :   
+D = 500 :  
+I didn't find de the global optimum there, most of the time, with  0.1 <c1 <0.6 and 1.0<C2< 1.5 it goes well to the fitness around 1 200 and then has a very slow progression. When C1>C2 it often took too much time to convergence.
+
+
+
+
+
 
 
 __F4 Shifted Rastrigin's function:__
@@ -176,8 +183,9 @@ Solution : see solutions file
 
 __F5 Shifted Griewank's function:__ 
 
-The PSO algorithm is very efficient here and it goes quickly to the fitness -179 quickly. The difficulty is to find the parameters that can goes to -179.9999.
-It doesn't require a lot of particles to find the optimum, less than 3 is enough and fast, with a C2=1.5 and C1 = 0.5. C2 + C3 shouldn't exceed 2 because when the algorithm approach to -179, too important mouvements of the particules make them miss the optimum and the algorithm take a lot of time to goes to -179.9999. W is set to 0.1 to assure some diversity.
+The PSO algorithm is very efficient here and it goes quickly to the fitness -179. The difficulty is to find the parameters that can goes to -179.9999.
+It doesn't require a lot of particles to find the optimum, less than 5 is enough and fast, with a C2=1.5 and C1 = 0.5.   
+C2 + C3 shouldn't exceed 2 because when the algorithm approach to -179, too important mouvements of the particules make them miss the optimum and the algorithm take a lot of time to goes to -179.9999. W is set to 0.1 to assure some diversity.
 
 
 D = 50:  
