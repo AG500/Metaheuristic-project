@@ -212,13 +212,13 @@ This function has a "plateau" which mean diversification is important, but becau
 D = 50:  
 Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 300 000.
 Results : Best fitness = -139.999963    Time : 71.94 sec. Time to be at -139.9999 :  51,03 sec  
-Solution : see solutions file
+Solution : see solutions file  
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Ackley%20D%20%3D%2050.JPG)
 
 D = 500:  
 Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 2 500 000.
 Results : Best fitness = -139.999948    Time : 5243.39 sec. Time to be at -139.9999 :  4 034.94 sec  
-Solution : see solutions file
+Solution : see solutions file  
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Ackley%20D%20%3D%20500.JPG)
 
 
