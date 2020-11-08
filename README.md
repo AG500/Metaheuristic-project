@@ -22,6 +22,7 @@ __How to run :__
 The class code has to precede the algorithm code. So you need to copy/paste the spécific class code of the problem, and the algorithm code to run it. It include the lower and upper bound and the data used for the problem.  
 To change dimension (continuous problem only), the variable "number_of_variables" has to be changed inside the problem call.  
 Example for D=500: problem = Sphere2(number_of_variables = 500)
+The data files of the two TSP problems are in the TSP files.
 
 
 
