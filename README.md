@@ -55,8 +55,8 @@ I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 89
 To keep at least the best individual of the last generation we have to use a numerous population, and a probability of mutation and of crossovers inferior to 1. But we have to keep a good number of computation. After several tests i used these parameters : population : 10 000; mutation : 0.975; Crossover: 0.975. So, we can expect to have about 6 individuals with the same characteristics as their parents at each generation. The type of tournament here is a Binary Tournament (only the 2 best individuals are selected), which is enought. The mutation used is "SwapMutation" which permutate 2 cities at each iterations.
 
 The global optimum has been found (according to Univ of Waterloo website the best fitness is 6 656).
-Results are : 
-   Fitness : 6 656;   time : 525 sec ; iterations : 3 900 000 
+Results are :  
+   Fitness : 6 656;   time : 525 sec ; iterations : 3 900 000  
    Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Djibouti%20GA.JPG)
 
@@ -75,8 +75,8 @@ The "Py2opt" package need some modifications because it calculate the path witho
 
 This method converge quickly to a fitness around 10 000 but has trouble going under it. That's why i stop the algorithm at 500 iterations.
 According to Univ of Waterloo website the best fitness is 9 362.
-Results are:
-  Fitness: 9 970;  time : 2633 sec; iterations: 500
+Results are:  
+  Fitness: 9 970;  time : 2633 sec; iterations: 500  
   Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Qatar%20TSP%202opt%20algo.JPG)
 
@@ -102,17 +102,17 @@ This is a simple function with no local optimum. Here i chose the parameters for
 Here the performance of PSO are so good than fine tuning of the parameters is not necessary. 
 
 D = 50:  
-Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 100 000.
-Results : Fitness = -449.999999    Time : 23.9 sec. Time to be at -449.9999 :  5.6 sec
-Solution : see solutions file
+  Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 100 000.  
+  Results : Fitness = -449.999999    Time : 23.9 sec. Time to be at -449.9999 :  5.6 sec  
+  Solution : see solutions file
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Sphere%20D%20%3D%2050.JPG)
 
 
 D = 500:  
-Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 500 000.
-Results : Fitness = -449.9999   Time : 23.9 sec. Time to be at -449.9999 :  5.6 sec
-Solution : see solutions file
+  Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 500 000.  
+  Results : Fitness = -449.9999   Time : 23.9 sec. Time to be at -449.9999 :  5.6 sec  
+  Solution : see solutions file
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Sphere%20D%20%3D%20500.JPG)
 
@@ -125,16 +125,16 @@ Here the PSO algorithm of JMetalPy seems to have a lot of trouble with D=500. Re
 The parameters i chose are completely different of the Sphere Function. Here i noticed than  when C1 < C2 and C1 is big, it allow a quicker convergence to the optimum. The best compromise i found is the one i chose for D=50. The parameters of the previous Sphere function (C1<C2 with big C2) works well but is not as fast. When C1=C2 the performance are not as good.
 
 D = 50:  
-Parameters : Swarm Size = 3,  C1 = 1.5, C2 = 0.2, w=0.  Iterations = 1 000 000.  
-Results : Fitness = -449;99995380281   Time : 175.37 sec. Time to be at -449.9999 :  112.79 sec  
-Solution : see solutions file
+  Parameters : Swarm Size = 3,  C1 = 1.5, C2 = 0.2, w=0.  Iterations = 1 000 000.  
+  Results : Fitness = -449;99995380281   Time : 175.37 sec. Time to be at -449.9999 :  112.79 sec  
+  Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Schwefel%20D%20%3D%2050.JPG)
 
 D = 500:  
 Here we can see the "pauses" of the algorithm due to, i think, a memory management problem of JMetalPy. We can see several "flat" interval wich get longer and longer as the algorithm progress. The biggest gap is between 6 000 and 7 600 seconds.  
-Parameters : Swarm Size = 3,  C1 = 1.5, C3 = 0.3, w=0.  Iterations = 2 500 000.  
-Results : Fitness = -443.940909969242   Time : 8 508.40 sec. Time to be at -449.9999 :  not reached  
-Solution : see solutions file
+  Parameters : Swarm Size = 3,  C1 = 1.5, C3 = 0.3, w=0.  Iterations = 2 500 000.  
+  Results : Fitness = -443.940909969242   Time : 8 508.40 sec. Time to be at -449.9999 :  not reached  
+  Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Schwefel%20D%20%3D%20500.JPG)
 
 
