@@ -144,10 +144,10 @@ __F3 Shifted Rosenbrock's function:__
 This problem is quite hard, algortihms tend to block at fitness = 480 and fitness = 430 for D=50. And below 430 the progression is very slow watever parameters i used. The dilema is to allow enough diversification to "cross" these two fitnesses but not so much so the convergence to the global optimum doesn't take to much time. Less particules we have, faster is the algorithm but it has more chances to be blocked at 480 or 430. When C2>1.2 and C1<C2 it often goes quickly to the fitness 430 but take time to go to 390. The performance of PSO on this function depend a lot of the first positions of the particules.
 
 D = 50 :  
-On this run the algorithm start from the fitness 138 916 236 and goes straight to 480 where it struggle to go throught. Sometimes the algorithm block at 430 as well but not this time. 
-Parameters : Swarm Size = 15, C1 = 0.4, C2 = 1.6, w=0.1  Iterations = 6 000 000.
-Results : Best fitness = 390.269571   Time : 2079,07 sec. Time to be at -390.9999 : not reached.  
-Solution : see solutions file
+On this run the algorithm start from the fitness 138 916 236 and goes straight to 480 where it struggle to go throught. Sometimes the algorithm block at 430 as well but not this time.  
+  Parameters : Swarm Size = 15, C1 = 0.4, C2 = 1.6, w=0.1  Iterations = 6 000 000.
+  Results : Best fitness = 390.269571   Time : 2079,07 sec. Time to be at -390.9999 : not reached.  
+  Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rosenbrock%20D%20%3D%2050.JPG)
 
 These parameters work also well with about the same results. But is trapped in an local optimum more easily.: Swarm Size = 7, C1 = 0.1, C2 = 1.5, w=0  Iterations = 6 000 000.
@@ -156,8 +156,8 @@ These parameters work also well with about the same results. But is trapped in a
 D = 500 :  
 I didn't find de the global optimum there, most of the time, with  0.1 <c1 <0.6 and 1.0<C2< 1.5 it goes well to the fitness around 1 200 and then has a very slow progression. When C1>C2 it took too much time to convergence.
 
-Parameters : Swarm Size = 5, C1 = 0.4, C2 = 1.6, w=0.00 Iterations = 3 800 000.
-Results : Best fitness = 1 127.8705    Time : 13 460,97 sec. Time to be at -390.9999 : not reached.  
+  Parameters : Swarm Size = 5, C1 = 0.4, C2 = 1.6, w=0.00 Iterations = 3 800 000.
+  Results : Best fitness = 1 127.8705    Time : 13 460,97 sec. Time to be at -390.9999 : not reached.  
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rosenbrock%20D%20%3D%20500.JPG)
 
@@ -169,16 +169,16 @@ __F4 Shifted Rastrigin's function:__
 There is a lot of local and narrow optimums here. Diversification is important, so the number of particles has to be high, and C1 > 0.5. Still, C2 need to be superior to assure a fast convergence to the global optimum. 
 
 D = 50 :  
-Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 1 000 000
-Results : Best fitness = -329.999954   Time : 328.60 sec. Time to be at -329.9999 : 304.05 sec  
-Solution : see solutions file
+  Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 1 000 000
+  Results : Best fitness = -329.999954   Time : 328.60 sec. Time to be at -329.9999 : 304.05 sec  
+  Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rastrigin%20D%3D50.JPG)
 
 
 D = 500 :  
-Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 5 000 000
-Results : Best fitness = -326.015924   Time : 14 161.56 sec. Time to be at -329.9999 : not reached  
-Solution : see solutions file
+  Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 5 000 000
+  Results : Best fitness = -326.015924   Time : 14 161.56 sec. Time to be at -329.9999 : not reached  
+  Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rastrigin%20D%3D500.JPG)
 
 
@@ -190,16 +190,16 @@ C2 + C3 shouldn't exceed 2 because when the algorithm approach to -179, too impo
 
 
 D = 50:  
-Parameters: Swarm Size = 5, C1 = 0.5, C2 = 1.5, w=0.3  Iterations = 100 000
-Results : Best fitness = -179.99999892   Time : 26.57 sec. Time to be at -179.9999 :  8.92 sec  
-Solution : see solutions file
+  Parameters: Swarm Size = 5, C1 = 0.5, C2 = 1.5, w=0.3  Iterations = 100 000
+  Results : Best fitness = -179.99999892   Time : 26.57 sec. Time to be at -179.9999 :  8.92 sec  
+  Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Griewank%20D%20%3D%2050.JPG)
 
 
 D = 500: here w is only 0.1 and the number of particules is 3, theses parameters are better for D = 500 than D=50.   
-Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 500 000.
-Results : Best fitness = -179.99999932   Time : 1174.71 sec. Time to be at -179.9999 :  587.86 sec
-Solution : see solutions file
+  Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 500 000.
+  Results : Best fitness = -179.99999932   Time : 1174.71 sec. Time to be at -179.9999 :  587.86 sec
+  Solution : see solutions file
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Griewank%20D%20%3D%20500.JPG)
 
@@ -208,15 +208,15 @@ __F6 Shifted Ackley's function:__
 This function has a "plateau" which mean diversification is important, but because there is one narrow global optimum, values of the parameters should not be too high or the algorithm could miss the optimum, and/or the convergence can be very long. I found the parameters C1 = 1 and C2 = 0.8 to be a good balance, then i set w=0 because it slows the convergence and is not useful.
 
 D = 50:  
-Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 300 000.
-Results : Best fitness = -139.999963    Time : 71.94 sec. Time to be at -139.9999 :  51,03 sec  
-Solution : see solutions file  
+  Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 300 000.
+  Results : Best fitness = -139.999963    Time : 71.94 sec. Time to be at -139.9999 :  51,03 sec  
+  Solution : see solutions file  
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Ackley%20D%20%3D%2050.JPG)
 
 D = 500:  
-Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 2 500 000.
-Results : Best fitness = -139.999948    Time : 5243.39 sec. Time to be at -139.9999 :  4 034.94 sec  
-Solution : see solutions file  
+  Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 2 500 000.
+  Results : Best fitness = -139.999948    Time : 5243.39 sec. Time to be at -139.9999 :  4 034.94 sec  
+  Solution : see solutions file  
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Ackley%20D%20%3D%20500.JPG)
 
 
