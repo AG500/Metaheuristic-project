@@ -176,7 +176,7 @@ D = 50 :
 
 
 D = 500 :  
-  Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 5 000 000
+  Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 5 000 000  
   Results : Best fitness = -326.015924   Time : 14 161.56 sec. Time to be at -329.9999 : not reached  
   Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rastrigin%20D%3D500.JPG)
@@ -190,15 +190,15 @@ C2 + C3 shouldn't exceed 2 because when the algorithm approach to -179, too impo
 
 
 D = 50:  
-  Parameters: Swarm Size = 5, C1 = 0.5, C2 = 1.5, w=0.3  Iterations = 100 000
+  Parameters: Swarm Size = 5, C1 = 0.5, C2 = 1.5, w=0.3  Iterations = 100 000  
   Results : Best fitness = -179.99999892   Time : 26.57 sec. Time to be at -179.9999 :  8.92 sec  
   Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Griewank%20D%20%3D%2050.JPG)
 
 
 D = 500: here w is only 0.1 and the number of particules is 3, theses parameters are better for D = 500 than D=50.   
-  Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 500 000.
-  Results : Best fitness = -179.99999932   Time : 1174.71 sec. Time to be at -179.9999 :  587.86 sec
+  Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 500 000.  
+  Results : Best fitness = -179.99999932   Time : 1174.71 sec. Time to be at -179.9999 :  587.86 sec  
   Solution : see solutions file
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Griewank%20D%20%3D%20500.JPG)
@@ -208,13 +208,13 @@ __F6 Shifted Ackley's function:__
 This function has a "plateau" which mean diversification is important, but because there is one narrow global optimum, values of the parameters should not be too high or the algorithm could miss the optimum, and/or the convergence can be very long. I found the parameters C1 = 1 and C2 = 0.8 to be a good balance, then i set w=0 because it slows the convergence and is not useful.
 
 D = 50:  
-  Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 300 000.
+  Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 300 000.  
   Results : Best fitness = -139.999963    Time : 71.94 sec. Time to be at -139.9999 :  51,03 sec  
   Solution : see solutions file  
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Ackley%20D%20%3D%2050.JPG)
 
 D = 500:  
-  Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 2 500 000.
+  Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 2 500 000.  
   Results : Best fitness = -139.999948    Time : 5243.39 sec. Time to be at -139.9999 :  4 034.94 sec  
   Solution : see solutions file  
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Ackley%20D%20%3D%20500.JPG)
