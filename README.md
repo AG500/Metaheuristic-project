@@ -46,7 +46,7 @@ This file is composed of 38 cities. By brute force we would have to compute 5,23
 
 I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 891 with 6 040 000 iterations and 354s. The temperature depend on the variations of the fitness during the computation here, because it converge quickly i chose 500 so that it can explore between the fitness 6 500 and 10 000. Because Djibouti is a relatively small problem, time is not an issue and because JMetalPy allow only the number of iterations as stopping criterion i chose a small alpha and a big number of iterations so that the SA algorithm could search a long time close to the global optimum.
     Convergence curve of SA on Djibouti TSP:
-  ![alt text]()
+  ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Djibouti%20SA.JPG)
 
 
 
@@ -59,7 +59,7 @@ Results are :
    Fitness : 6 656;   time : 525 sec ; iterations : 3 900 000   
    Solution (0 being the first city): 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30, 35, 33, 32, 37, 36, 34, 31, 29, 28, 20, 13, 9, 0, 1, 3, 2, 4, 5, 6, 7.
   
-![alt text]()
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Djibouti%20GA.JPG)
 
 
 __Qatar TSP:__  
@@ -80,7 +80,7 @@ Results are:
   Fitness: 9 970;  time : 2633 sec; iterations: 500
   Solution (0 being the first city) : 0, 5, 7, 6, 10, 13, 12, 15, 22, 24, 16, 25, 23, 20, 17, 32, 27, 21, 28, 44, 56, 59, 68, 73, 71, 77, 74, 75, 86, 79, 70, 81, 61, 58, 35, 62, 19, 64, 84, 85, 97, 89, 88, 93, 98, 100, 103, 110, 113, 112, 108, 101, 102, 90, 92, 95, 105, 104, 106, 107, 115, 116, 117, 121, 118, 125, 124, 126, 129, 131, 133, 136, 139, 144, 141, 145, 148, 155, 160, 162, 163, 168, 171, 178, 175, 181, 193, 185, 182, 186, 189, 191, 190, 188, 187, 183, 176, 180, 192, 184, 179, 177, 167, 166, 161, 169, 170, 165, 159, 154, 157, 158, 164, 174, 172, 173, 156, 153, 137, 138, 140, 143, 149, 152, 151, 146, 150, 147, 142, 134, 135, 130, 128, 132, 127, 123, 122, 119, 120, 114, 111, 109, 99, 96, 94, 91, 87, 82, 78, 80, 83, 76, 69, 63, 67, 36, 26, 33, 39, 42, 46, 38, 50, 65, 72, 66, 60, 57, 55, 52, 51, 53, 47, 45, 40, 37, 43, 48, 54, 49, 41, 34, 30, 31, 29, 18, 14, 11, 9, 8, 4, 2, 3, 1
 
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Qatar%20TSP%202opt%20algo.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Qatar%20TSP%202opt%20algo.JPG)
 
 
 
@@ -108,7 +108,7 @@ Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 100 000.
 Results : Fitness = -449.999999    Time : 23.9 sec. Time to be at -449.9999 :  5.6 sec
 Solution : see solutions file
 
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Sphere%20D%20%3D%2050.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Sphere%20D%20%3D%2050.JPG)
 
 
 D = 500:  
@@ -116,7 +116,7 @@ Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 500 000.
 Results : Fitness = -449.9999   Time : 23.9 sec. Time to be at -449.9999 :  5.6 sec
 Solution : see solutions file
 
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Sphere%20D%20%3D%20500.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rastrigin%20D%3D500.JPG)
 
   
   
@@ -130,14 +130,14 @@ D = 50:
 Parameters : Swarm Size = 3,  C1 = 1.5, C2 = 0.2, w=0.  Iterations = 1 000 000.  
 Results : Fitness = -449;99995380281   Time : 175.37 sec. Time to be at -449.9999 :  112.79 sec  
 Solution : see solutions file
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Schwefel%20D%20%3D%2050.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Schwefel%20D%20%3D%2050.JPG)
 
 D = 500:  
 Here we can see the "pauses" of the algorithm due to, i think, a memory management problem of JMetalPy. We can see several "flat" interval wich get longer and longer as the algorithm progress. The biggest gap is between 6 000 and 7 600 seconds.  
 Parameters : Swarm Size = 3,  C1 = 1.5, C3 = 0.3, w=0.  Iterations = 2 500 000.  
 Results : Fitness = -443.940909969242   Time : 8 508.40 sec. Time to be at -449.9999 :  not reached  
 Solution : see solutions file
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Schwefel%20D%20%3D%20500.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Schwefel%20D%20%3D%20500.JPG)
 
 
 __Multimodal function:__
@@ -150,7 +150,7 @@ On this run the algorithm start from the fitness 138 916 236 and goes straight t
 Parameters : Swarm Size = 15, C1 = 0.4, C2 = 1.6, w=0.1  Iterations = 6 000 000.
 Results : Best fitness = 390.269571   Time : 2079,07 sec. Time to be at -390.9999 : not reached.  
 Solution : see solutions file
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Rosenbrock%20D%20%3D%2050.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rosenbrock%20D%20%3D%2050.JPG)
 
 The parameters : Swarm Size = 7, C1 = 0.1, C2 = 1.5, w=0  Iterations = 6 000 000. Work also well with about the same results. But is trapped in an local optimum more easily.
 
@@ -174,14 +174,14 @@ D = 50 :
 Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 1 000 000
 Results : Best fitness = -329.999954   Time : 328.60 sec. Time to be at -329.9999 : 304.05 sec  
 Solution : see solutions file
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Rastrigin%20D%3D50.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rastrigin%20D%3D50.JPG)
 
 
 D = 500 :  
 Parameters : Swarm Size = 20, C1 = 0.5, C2 = 1.3, w=0.1  Iterations = 5 000 000
 Results : Best fitness = -326.015924   Time : 14 161.56 sec. Time to be at -329.9999 : not reached  
 Solution : see solutions file
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Rastrigin%20D%3D500.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rastrigin%20D%3D500.JPG)
 
 
 __F5 Shifted Griewank's function:__ 
@@ -195,7 +195,7 @@ D = 50:
 Parameters: Swarm Size = 5, C1 = 0.5, C2 = 1.5, w=0.3  Iterations = 100 000
 Results : Best fitness = -179.99999892   Time : 26.57 sec. Time to be at -179.9999 :  8.92 sec  
 Solution : see solutions file
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Griewank%20D%20%3D%2050.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Griewank%20D%20%3D%2050.JPG)
 
 
 D = 500: here w is only 0.1 and the number of particules is 3, theses parameters are better for D = 500 than D=50.   
@@ -203,7 +203,7 @@ Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 500 000.
 Results : Best fitness = -179.99999932   Time : 1174.71 sec. Time to be at -179.9999 :  587.86 sec
 Solution : see solutions file
 
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Griewank%20D%20%3D%20500.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Griewank%20D%20%3D%20500.JPG)
 
 __F6 Shifted Ackley's function:__
 
@@ -213,13 +213,13 @@ D = 50:
 Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 300 000.
 Results : Best fitness = -139.999963    Time : 71.94 sec. Time to be at -139.9999 :  51,03 sec  
 Solution : see solutions file
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Ackley%20D%20%3D%2050.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Ackley%20D%20%3D%2050.JPG)
 
 D = 500:  
 Parameters: Swarm Size = 5, C1 = 1, C2 = 0.8, w=0  Iterations = 2 500 000.
 Results : Best fitness = -139.999948    Time : 5243.39 sec. Time to be at -139.9999 :  4 034.94 sec  
 Solution : see solutions file
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Ackley%20D%20%3D%20500.JPG)
+![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Ackley%20D%20%3D%20500.JPG)
 
 
 
