@@ -150,7 +150,7 @@ Results : Best fitness = 390.269571   Time : 2079,07 sec. Time to be at -390.999
 Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rosenbrock%20D%20%3D%2050.JPG)
 
-The parameters : Swarm Size = 7, C1 = 0.1, C2 = 1.5, w=0  Iterations = 6 000 000. Work also well with about the same results. But is trapped in an local optimum more easily.
+These parameters work also well with about the same results. But is trapped in an local optimum more easily.: Swarm Size = 7, C1 = 0.1, C2 = 1.5, w=0  Iterations = 6 000 000.
 
 
 D = 500 :  
