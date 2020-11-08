@@ -3,7 +3,7 @@ Github repository for DSTI Metaheuristic project.
 
 Hello,
 
-This project has for objective to find optimisation solutions to the different problems of the exam. 
+This project has for objective to find optimization solutions to the different problems of the exam. 
 As it has been asked there is a file for each problem (8) and this readme will describe the criteria used to choose the algorithms and their parameters.
 
 To do this project, i have chose the "JMetalPy v 1.5.5" package. To spare time i decided to use only this package so i could master it more easily. The only exception being for TSP where i also used Py2Opt package.
@@ -17,8 +17,8 @@ For the solutions, there is one file that contains all the solutions of the prob
 
 __How to run :__  
 
-The class code has to precede the algorithm code. So you need to copy/paste the spécific class code of the problem, and the algorithm code to run it. The lower and upper bound and the data used for the problem.
-To change dimension (continuous problem only), the variable "number_of_variables" has to be changed inside the problem call. Ex for D=500: problem = Sphere2(number_of_variables = 500)
+The class code has to precede the algorithm code. So you need to copy/paste the spécific class code of the problem, and the algorithm code to run it. It include the lower and upper bound and the data used for the problem.  
+To change dimension (continuous problem only), the variable "number_of_variables" has to be changed inside the problem call. (Example for D=500: problem = Sphere2(number_of_variables = 500))
 
 
 ## Discrete Optimization:
