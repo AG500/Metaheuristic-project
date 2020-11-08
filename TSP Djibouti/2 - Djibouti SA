@@ -15,7 +15,7 @@ from jmetal.util.observer import BasicObserver, PrintObjectivesObserver, WriteFr
 from jmetal.util.solution import read_solutions, print_function_values_to_file, print_variables_to_file
 from jmetal.lab.visualization import Plot
 
-problem =  TSP2(instance = "Djiboutidj38.tsp")   #i am using TSP2, wich is the TSP class of JMetal but for Float coordinates
+problem =  TSP2(instance = "Djiboutidj38.tsp")   #The file path has to be modified
                         
 max_evaluations = 6500000
 
