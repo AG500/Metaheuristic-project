@@ -46,7 +46,7 @@ This file is composed of 38 cities. By brute force we would have to compute 5,23
 
 I tried SA with temperature = 500 and alpha = 0.999999. The best result was 6 891 with 6 040 000 iterations and 354s. The temperature depend on the variations of the fitness during the computation here, because it converge quickly i chose 500 so that it can explore between the fitness 6 500 and 10 000. Because Djibouti is a relatively small problem, time is not an issue and because JMetalPy allow only the number of iterations as stopping criterion i chose a small alpha and a big number of iterations so that the SA algorithm could search a long time close to the global optimum.
     Convergence curve of SA on Djibouti TSP:
-  ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Djibouti%20SA.JPG)
+  ![alt text]()
 
 
 
@@ -59,7 +59,7 @@ Results are :
    Fitness : 6 656;   time : 525 sec ; iterations : 3 900 000   
    Solution (0 being the first city): 8, 11, 10, 18, 17, 16, 15, 12, 14, 19, 22, 25, 24, 21, 23, 27, 26, 30, 35, 33, 32, 37, 36, 34, 31, 29, 28, 20, 13, 9, 0, 1, 3, 2, 4, 5, 6, 7.
   
-![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curve%20Djibouti%20GA.JPG)
+![alt text]()
 
 
 __Qatar TSP:__  
