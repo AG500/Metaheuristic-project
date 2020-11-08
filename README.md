@@ -13,6 +13,8 @@ The hardware used was an Intel core i5 (8th gen) with 8Go of RAM and Windows 10.
 
 For every problem there is 3 files : the code of the problem's class, the code of the algorithm, and the convergence curve. To simplify, the algorithm code contain both D=50 and D=500 problems.
 
+The running order is indicated in the name of the file. The problem class is always first and need only one run. For continuous problem it contains all the data needed, while for TSP you need to dowload the files. 
+
 For the solutions, there is one file that contains all the solutions of the problems.
 
 __How to run :__  
@@ -22,15 +24,16 @@ To change dimension (continuous problem only), the variable "number_of_variables
 Example for D=500: problem = Sphere2(number_of_variables = 500)
 
 
+
 ## Discrete Optimization:
 
 __TSP Problems:__  
 
 To use JMetalPy on this data base we have to modify the TSP problem class of this package so it can accept float coordinates. Indeed, TSP file on the internet are usualy with integer coordinate and it looks like the developpers used "int()" to optimize the code.
 
-So firt, we have to change the TSP class by creating another class that i called TSP2. The code is in the "TSP2 class file".
+So firt, we have to change the TSP class by creating another class that i called TSP2.
 
-Then what algorithm to use? Because this is a single objective combinatory problem, i tried both Simulated Algorithm and Genetic Algorithm. SA because it is a simple algorithm and i hoped than it would be much faster than other algorithms, and GA because of the analogy between DNA and the combination of cities.
+Then, what algorithm to use? Because this is a single objective combinatory problem, i tried both Simulated Algorithm and Genetic Algorithm. SA because it is a simple algorithm and i hoped than it would be much faster than other algorithms, and GA because of the analogy between DNA and the combination of cities.
 
 Simulated Annealing here is not so different than "trying every combinaison" because in JMetalPy it uses a mutation called "Swap Permutation" that select only 2 cities and permutate them. While in GA, if one of the parents have the optimal combination for a part of the path, the combination can survive threw the next generations, depending of the size of the offspring (childs) and the probability of crossover and mutation. Also, SA tend to convergence very quickly to a local optimum while GA, with enough time, goes to the global optimum.
 
