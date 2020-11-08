@@ -11,6 +11,7 @@ from jmetal.util.termination_criterion import StoppingByEvaluations
 from jmetal.util.observer import BasicObserver
 
 if __name__ == '__main__':
+    #The file path has to be modified
     problem = TSP2(instance="Djiboutidj38.tsp")
 
     print('Cities: ', problem.number_of_variables)
