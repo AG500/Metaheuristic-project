@@ -1,4 +1,4 @@
-problem =  TSP2(instance = "qa194.tsp")     ### place the file path here
+problem =  TSP2(instance = "qa194.tsp")     #The file path has to be modified
 pb_dist_matrix = problem.distance_matrix
 
 cities_names = list(range(0,195))        
