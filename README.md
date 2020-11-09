@@ -149,7 +149,7 @@ This problem is quite hard, algortihms tend to block at fitness = 480 and fitnes
 D = 50 :  
 On this run the algorithm start from the fitness 138 916 236 and goes straight to 480 where it struggle to go throught. Sometimes the algorithm block at 430 as well but not this time.  
   Parameters : Swarm Size = 15, C1 = 0.4, C2 = 1.6, w=0.1  Iterations = 6 000 000.  
-  Results : Best fitness = 390.269571   Time : 2079,07 sec. Time to be at -390.9999 : not reached.  
+  Results : Best fitness = 390.269571   Time : 2 079.07 sec. Time to be at -390.9999 : not reached.  
   Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rosenbrock%20D%20%3D%2050.JPG)
 
