@@ -11,18 +11,19 @@ To do this project, i have chosen the "JMetalPy v 1.5.5" package. To spare time 
 
 The hardware used was an Intel core i5 (8th gen) with 8Go of RAM and Windows 10. Computations were made without multiprocessing. For every problem i decided not to exceed 4 hours of computation because of practical reasons and also because JMetalPy stopping criteria is only about a maximum number of iterations. I defined the maximum number of iterations of the most difficult problems with this rule. For most problem it is not an issue but for Schwefel's and Rosenbrock's function with D=500, the algorithm could need way more than 4 hours of computation. 
 
-For every problem there is 2 files : the code of the problem's class and the code of the algorithm. To simplify, the algorithm code contain both D=50 and D=500 problems.
 
-The running order is indicated in the name of the file. The problem class is always first and need only one run. For continuous problem it contains all the data needed, while for TSP you need to dowload the files. 
-
-For the solutions, there is one file that contains all the solutions of the problems.
+The solutions are all in one file name "Solutions".
 
 __How to run :__  
 
+For every problem there is 2 files : the code of the problem's class and datas, and the code of the algorithm. To simplify, the algorithm code contain both D=50 and D=500 problems. The data files of the two TSP problems are in the TSP files.
+
+The running order is indicated in the name of the file. The problem class is always first and need only one run. For continuous problem it contains all the data needed, while for TSP you need to dowload the files and change the path in the code. 
+
 The class code has to precede the algorithm code. So you need to copy/paste the spécific class code of the problem, and the algorithm code to run it. It include the lower and upper bound and the data used for the problem.  
 To change dimension (continuous problem only), the variable "number_of_variables" has to be changed inside the problem call.  
-Example for D=500: problem = Sphere2(number_of_variables = 500)
-The data files of the two TSP problems are in the TSP files.
+Example: for D=500: problem = Sphere2(number_of_variables = 500).  
+
 
 
 
