@@ -17,7 +17,7 @@ from jmetal.lab.visualization import Plot
 
 problem =  TSP2(instance = "Djiboutidj38.tsp")   #The file path has to be modified
                         
-max_evaluations = 6500000
+max_evaluations = 6040000
 
 algorithm = SimulatedAnnealing(problem=problem, mutation=PermutationSwapMutation(1.0 / problem.number_of_variables), 
             termination_criterion=StoppingByEvaluations(max_evaluations=max_evaluations))
