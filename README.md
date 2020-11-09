@@ -114,7 +114,7 @@ D = 50:
 
 D = 500:  
   Parameters: Swarm Size = 3, C1 = 0.1, C2 = 1.5, w=0.  Iterations = 500 000.  
-  Results : Fitness = -449.99995   Time : 995.41 sec. Time to be at -449.9999 :  832.75 sec  
+  Results : Fitness = -449.999951   Time : 995.41 sec. Time to be at -449.9999 :  832.75 sec  
   Solution : see solutions file
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Sphere%20D%20%3D%20500.JPG)
@@ -129,14 +129,14 @@ The parameters i chose are completely different of the Sphere Function. Here i n
 
 D = 50:  
   Parameters : Swarm Size = 3,  C1 = 1.5, C2 = 0.2, w=0.  Iterations = 1 000 000.  
-  Results : Fitness = -449;99995380281   Time : 175.37 sec. Time to be at -449.9999 :  112.79 sec  
+  Results : Fitness = -449.999954  Time : 175.37 sec. Time to be at -449.9999 :  112.79 sec  
   Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Schwefel%20D%20%3D%2050.JPG)
 
 D = 500:  
 Here we can see the "pauses" of the algorithm due to, i think, a memory management problem of JMetalPy. We can see several "flat" interval wich get longer and longer as the algorithm progress. The biggest gap is between 6 000 and 7 600 seconds.  
   Parameters : Swarm Size = 3,  C1 = 1.5, C3 = 0.3, w=0.  Iterations = 2 500 000.  
-  Results : Fitness = -443.940909969242   Time : 8 508.40 sec. Time to be at -449.9999 :  not reached  
+  Results : Fitness = -443.940910   Time : 8 508.40 sec. Time to be at -449.9999 :  not reached  
   Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Schwefel%20D%20%3D%20500.JPG)
 
@@ -159,7 +159,7 @@ These parameters work also well with about the same results. But is trapped in a
 D = 500 :  
 I didn't find de the global optimum there, most of the time, with  0.1 <c1 <0.6 and 1.0<C2< 1.5 it goes well to the fitness around 1 200 and then has a very slow progression. When C1>C2 it took too much time to convergence.  
   Parameters : Swarm Size = 5, C1 = 0.4, C2 = 1.6, w=0.00 Iterations = 3 800 000.  
-  Results : Best fitness = 1 127.8705    Time : 13 460,97 sec. Time to be at -390.9999 : not reached.  
+  Results : Best fitness = 1 127.870560    Time : 13 460,97 sec. Time to be at -390.9999 : not reached.  
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Rosenbrock%20D%20%3D%20500.JPG)
 
@@ -193,14 +193,14 @@ C2 + C3 shouldn't exceed 2 because when the algorithm approach to -179, too impo
 
 D = 50:  
   Parameters: Swarm Size = 5, C1 = 0.5, C2 = 1.5, w=0.3  Iterations = 100 000  
-  Results : Best fitness = -179.99999892   Time : 26.57 sec. Time to be at -179.9999 :  8.92 sec  
+  Results : Best fitness = -179.999999   Time : 26.57 sec. Time to be at -179.9999 :  8.92 sec  
   Solution : see solutions file
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Griewank%20D%20%3D%2050.JPG)
 
 
 D = 500: here w is only 0.1 and the number of particules is 3, theses parameters are better for D = 500 than D=50.   
   Parameters: Swarm Size = 3, C1 = 0.5, C2 = 1.5, w=0.1  Iterations = 500 000.  
-  Results : Best fitness = -179.99999932   Time : 1174.71 sec. Time to be at -179.9999 :  587.86 sec  
+  Results : Best fitness = -179.999999   Time : 1174.71 sec. Time to be at -179.9999 :  587.86 sec  
   Solution : see solutions file
 
 ![alt text](https://github.com/AG500/Metaheuristic-project/blob/master/Convergence%20curves/Convergence%20curve%20Griewank%20D%20%3D%20500.JPG)
