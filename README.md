@@ -6,7 +6,7 @@ Hello,
 This project has for objective to find optimization solutions to the different problems of the exam. 
 As it has been asked there is a file for each problem (8) and this readme will describe the criteria used to choose the algorithms and their parameters.
 
-To do this project, i have chose the "JMetalPy v 1.5.5" package. To spare time i decided to use only this package so i could master it more easily. The only exception being for TSP where i also used Py2Opt package.
+To do this project, i have chosen the "JMetalPy v 1.5.5" package. To spare time i decided to use only this package so i could master it more easily. The only exception being for TSP where i also used Py2Opt package.
 "JMetalPy" is not without weakness, for example: the "Simulated Annealing" algorithm documentation doesn't provide a minimum temperature stopping criterion (if it exist i couldn't find it in the documentation), there is no possibility to export iterations data such as fitness in a file easily ("printed" data are available) and the TSP class problem has to be modified to accept float coordinates. But it does the job.
 
 The hardware used was an Intel core i5 (8th gen) with 8Go of RAM and Windows 10. Computations were made without multiprocessing. For every problem i decided not to exceed 4 hours of computation because of practical reasons and also because JMetalPy stopping criteria is only about a maximum number of iterations. I defined the maximum number of iterations of the most difficult problems with this rule. For most problem it is not an issue but for Schwefel's and Rosenbrock's function with D=500, the algorithm could need way more than 4 hours of computation. 
