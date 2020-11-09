@@ -147,7 +147,7 @@ class Solver2:
         path_distance = 0
         for ind in range(len(path) - 1):
             path_distance += distance_matrix[path[ind]][path[ind + 1]] #Has to be modified to make a loop
-        path_distance += distance_matrix[path[0]][path[-1]] #added by AG
+        path_distance += distance_matrix[path[0]][path[-1]] #Added
         
         return float("{0:.2f}".format(path_distance))
 
