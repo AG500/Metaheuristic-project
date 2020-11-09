@@ -18,7 +18,8 @@ __How to run :__
 
 For every problem there is 2 files : the code of the problem's class and datas, and the code of the algorithm. To simplify, the algorithm code contain both D=50 and D=500 problems. The data files of the two TSP problems are in the TSP files.
 
-The running order is indicated in the name of the file. The problem class is always first and need only one run. For continuous problem it contains all the data needed, while for TSP you need to dowload the files and change the path in the code. 
+The running order is indicated in the name of the file. The problem class is always first and need only one run. For continuous problem it contains all the data needed, while for TSP you need to dowload the files and change the path in the code.   
+Example : problem = TSP2(instance=__"Djiboutidj38.tsp"__)
 
 The class code has to precede the algorithm code. So you need to copy/paste the spécific class code of the problem, and the algorithm code to run it. It include the lower and upper bound and the data used for the problem.  
 To change dimension (continuous problem only), the variable "number_of_variables" has to be changed inside the problem call.  
